@@ -1,0 +1,6646 @@
+﻿© Random Forest LLC, 2022. All rights
+reserved.
+
+Some of the essays in this book are adapted
+from material I originally published on the A
+Cloud Guru blog. Used with permission.
+
+This book contains numerous links to
+third-party internet resources, which were valid
+at the time of publication but could disappear at
+any time. If you find a dead link, please feel
+free to drop me a line at
+forrest@goodtechthings.com so I can correct it.
+
+1
+
+
+
+Table of Contents
+How to use this book (Don't skip this part) 9
+
+Prologue: The greatest resume I've ever
+seen 14
+
+Part 1: Cracking the Cloud Resume
+Challenge 23
+
+The challenge itself 24
+Why does the Cloud Resume Challenge
+work? 30
+Breaking down the challenge 36
+Community resources 40
+
+The Cloud Resume Challenge Discord
+Server 41
+The Cloud Resume Challenge GitHub
+Repository 41
+The Cloud Resume Challenge Video
+Tutorials 41
+The Challenge in Spanish 42
+More AWS Challenges 42
+
+Part 2: Challenge walkthrough 44
+Setup and safety (before you begin) 45
+
+Access and credentials 45
+The original way (if you must) 46
+
+2
+
+
+
+The professional way (my
+recommendation) 47
+
+Billing 50
+Cloud hygiene 52
+
+Chunk 0: Certification prep 54
+How to approach this chunk 54
+Helpful resources 58
+
+Paid resources 59
+Free resources 60
+
+Mods 60
+DevOps Mod: If you have several
+years of existing IT experience 60
+Security Mod: If you want a cloud
+security job 61
+Developer Mod: If you want to
+become a cloud developer 62
+Developer Mod: If you are about to
+graduate from college with a
+computer science-y degree 62
+
+Stacy's story: From IT Service Desk
+Manager to Cloud Operations Engineer
+62
+Pause to reflect 65
+
+Chunk 1: Building the front end 66
+How to approach this chunk 67
+Helpful resources 70
+
+3
+
+
+
+HTML / CSS 70
+Static website tutorials 71
+DNS and CDNs 71
+Actual CRC sites 72
+
+Jerry's story: From respiratory therapist
+to Associate Solutions Architect at AWS
+72
+Mods 75
+
+Developer Mod: Frame Job 75
+DevOps Mod: Automation Nation 75
+Security Mod: Spoof Troop 77
+
+Pause to reflect 78
+Chunk 2: Building the API 79
+
+How to approach this chunk 80
+Helpful resources 85
+
+Python 85
+APIs 86
+AWS serverless 87
+Source control 87
+
+Jakob's Story: From Clinical Research
+Technician to Cloud Engineer 87
+Mods 88
+
+Developer Mod: Schemas and
+Dreamers 88
+DevOps Mod: Monitor Lizard 89
+
+4
+
+
+
+Part 1: Establishing metrics 90
+Part 2: Getting notified 91
+
+Security Mod: Check Your Privilege
+92
+
+Pause to reflect 94
+Chunk 3: Front-end / back-end integration
+95
+
+How to approach this chunk 96
+How to write your very own smoke
+test 96
+
+Helpful resources 99
+Mods 100
+
+Developer Mod: Playing the Hits 100
+DevOps Mod: Browser Up 101
+Security Mod: Wall of Fire 101
+
+Pause to reflect 102
+Nana's Story: From Tech Support to
+Cloud Native Engineer 103
+
+Chunk 4: Automation / CI 106
+How to approach this chunk 107
+
+AWS-specific infrastructure-as-code
+tools 109
+
+CloudFormation 109
+The CDK 109
+
+5
+
+
+
+Other infrastructure-as-code tools
+109
+
+Terraform 109
+Pulumi 110
+
+Setting up your deployment pipeline
+111
+
+Helpful resources 112
+Mods 113
+
+Developer Mod / Security Mod:
+Chain Reaction 113
+
+Initial reading 114
+Challenge steps 115
+
+DevOps Mod: All The World's A
+Stage 117
+
+Stephanie's Story: From Bank Manager
+to Cloud Engineer 121
+Pause to reflect 122
+
+Chunk 5: The blog … and beyond 124
+How to approach this chunk 124
+
+Include a diagram 126
+Make it about you, not about the
+challenge 126
+Consider focusing on your mods 127
+Don't ramble on 128
+Tag me 128
+
+6
+
+
+
+Ian's Story: Writing a Blog That Gets
+Exposure 129
+
+Helpful resources 131
+Pause to reflect 132
+
+Part 3: From challenge to career 133
+What is a "cloud job", anyway? 135
+
+The history of the cloud job 136
+The first IT jobs 136
+The "golden age" of IT: everybody
+has their own servers! 136
+The emergence of the cloud job 140
+
+What does a "day in the life" look like for
+a cloud engineer? 143
+Is there actually such a thing as an
+"entry-level cloud job"? 145
+
+Getting unstuck: the underrated skill of
+asking for help 148
+
+What NOT to do: The Well of Despair
+150
+Three steps to get back on track 150
+
+The career-changing art of reading the docs
+156
+
+Reading docs: the wrong way and the
+right way 158
+What do I get out of all this? 167
+
+7
+
+
+
+Mapping your path to a cloud job 170
+Getting hired without tech experience
+170
+
+Building your skill stack 172
+When to apply 174
+
+Getting hired with IT experience, but no
+cloud experience 176
+
+Exploiting your "unfair advantage"
+177
+Avoiding a temporary step back 180
+
+How to effectively interview for work with a
+portfolio site 182
+
+The three questions interviewers
+ultimately want you to answer 182
+How to show off your portfolio site
+during interviews 184
+Reminder: Interviews are two-way
+streets 187
+Tech takes a backseat to company
+culture and learning 188
+
+Networking your way to a job 191
+Resume Roulette: a losing game 191
+How hiring happens 192
+Network Bets: a better game 193
+Owning your credibility 194
+Building connections 195
+
+8
+
+
+
+But I’m an introvert … I can’t network!
+196
+Play the long game – it’s a shortcut 200
+
+Afterword: The side project that made the
+front page 202
+
+Anatomy of the perfect cloud project 204
+Paying it forward 207
+
+Acknowledgements 210
+
+9
+
+
+
+How to use this book (Don't
+skip this part)
+
+You will not get the most out of the Cloud
+Resume Challenge Guidebook if you just read
+it straight through. It's designed to accompany
+your hands-on learning.
+
+This book has three main sections. In the first
+section, I give you some background about the
+Cloud Resume Challenge and break down the
+challenge into six smaller "chunks", which I
+propose tackling over six weeks.
+
+These chunks are designed to be
+independently valuable as standalone
+mini-projects; if you quit after 2 chunks, 3
+chunks, 4 chunks, or 5 chunks, you'll still have
+built something useful and interesting that you
+can talk about in a job interview or use as an
+entry point for future learning. There are many
+paths to a cloud career, and it's completely
+okay to use just part of the Cloud Resume
+Challenge to fill a gap or spur further
+exploration.
+
+10
+
+
+
+But if you're new to cloud, you should continue
+on to the second, longer section of the book,
+where we walk through each chunk in detail. I'll
+give you a bunch of preparatory reading
+suggestions to help you get your head around
+the new concepts introduced in each section.
+I'll give you some pointers and hints on how to
+tackle each chunk of work.
+
+Perhaps most importantly, each chunk includes
+"mods" at the end - extensions you can make
+to the core challenge project in order to
+practice key skills. These mods come in three
+flavors:
+
+● Developer Mods
+● DevOps Mods
+● Security Mods
+
+I would suggest picking one set of mods to add
+on as you proceed through the book,
+depending on what kind of cloud job you are
+looking for. For example, if you do the security
+mods, by the end of the challenge you will
+have gained additional hands-on experience
+with secure DNS, least privilege access, API
+security, and secure software supply chains -
+all great discussion topics for a cloud security
+job interview.
+
+11
+
+
+
+What I will NOT do in this section is give you
+step-by-step "click here, then run this
+command"-style instructions for how to
+complete the challenge. Don't worry - even with
+the additional resources and guidance you'll
+find in these pages, the learning will still come
+from you!
+
+The third and final section of the book, which
+you can read at any time, comprises six essays
+(corresponding to the six challenge chunks)
+that provide deeper advice on how to leverage
+your work on the challenge toward a
+successful cloud career.
+
+The book contains links to many of what I
+consider to be the finest learning resources in
+the cloud world, some of which are true hidden
+gems you won't see recommended
+everywhere; you need to follow these links, do
+the exercises, and play with the interactive
+environments. You need to do the mods, not
+just read about them. The Cloud Resume
+Challenge isn't about passively consuming
+information. You truly will get out of it what you
+put into it.
+
+12
+
+
+
+Now since I wrote this book to help you get a
+job in IT, it's only fair that we conclude this
+section with a nod to horror master Stephen
+King: the author of perhaps the most famous
+book written about IT.
+
+(checks notes) Oh, that book is called "It"?
+Never mind.
+
+But King did write another wonderful book
+about his own specialty, the craft of writing. On
+Writing - a book that I highly recommend, even
+for people who don't want to become
+professional novelists - is only incidentally
+about how to structure good sentences and
+craft a compelling plot. It's mostly about King's
+personal journey.
+
+King had no Ivy League pedigree or wealthy
+connections. He worked in a laundry and wrote
+at nights in his doublewide trailer, filling
+wastebaskets with rejected story scraps until
+finally he made it big. Stephen King's talents
+are unique, but On Writing has played a key
+role in the development of thousands of other
+successful writers because King helps you see
+a path through the slog of rejection and
+setbacks to the happy ending - he makes you
+
+13
+
+
+
+believe that success is possible, as long as you
+just don't give up.
+
+And that's the final thing this book (call it On
+Getting a Cloud Job) is designed to do.
+Throughout, I've included stories from Cloud
+Resume Challengers who've gone on to start
+new careers in the cloud - some from older
+forms of IT, others from completely non-tech
+backgrounds like plumbing and HR. These
+stories are real, but they're not unique. They've
+inspired me, and I hope they'll inspire you, too,
+when you're up working late at night. I hope
+they'll help you see that if you put in the work,
+your cloud future is 100% attainable. And it all
+starts by building something real.
+
+So on that note, let's begin our journey by
+meeting an unusual young man named Daniel
+Singletary.
+
+14
+
+
+
+Prologue: The greatest
+resume I've ever seen
+
+When COVID-19 hit, Daniel Singletary was
+already pretty much fed up with his job. As a
+commercial and residential plumber in metro
+Atlanta, he pulled 11-hour days working some
+of the dirtiest, stinkiest problems in the country.
+
+Take, for example, the day he got a call about
+an unexplained odor in a suburban shopping
+strip. Daniel and a coworker headed to the
+scene. There was no mistaking the smell. It
+was sewage, and it was raw.
+
+On a reconnaissance trip to the restrooms,
+Daniel noticed something odd: a current of air
+was flowing around the base of the toilets.
+When he levered a commode off the floor, he
+staggered backwards, hit by a blast of noxious
+wind. "Imagine," he wrote later, "a leaf blower
+blowing sewer gas in your face." Not only is
+this unusual, it shouldn't even be possible.
+Sewer pipes don't blow air. And yet somehow,
+this entire shopping strip was passing gas.
+
+15
+
+
+
+There was nothing to do but work the problem
+step by step. Over the next three days, Daniel
+and his partner worked over the building from
+opposite ends, unsealing and re-fitting every
+plumbing fixture they could find. Eventually,
+they narrowed the source of the mystery
+airflow down to two possible locations: a hair
+salon and a restaurant.
+
+This is where the problem got extra tricky. How
+do you troubleshoot the plumbing in a
+restaurant without, you know, closing down the
+restaurant? Eventually Daniel had a bright
+idea: a smoke test. Literally. Up to the roof
+vents he went, armed with smoke bombs.  His
+reasoning: "Wherever sewer odor can get in,
+so can smoke … except we can see smoke
+with a flashlight."
+
+Sure enough, following the clouds of smoke
+cleared up the mystery. Someone had tied the
+vent hood for the restaurant's stove into the
+sewer system, forcing air into the pipes. The
+immediate problem might be solved, but
+Daniel's desire to leave plumbing, maybe even
+to a job where he could choose what to smell,
+was only growing.
+
+16
+
+
+
+It was around this time that Daniel and I met.
+His roommate, an IT worker, had shown him a
+blog post I wrote about something called the
+Cloud Resume Challenge. The challenge was
+designed to help people get their first job in
+cloud. It came with a promise: host your
+resume in the cloud, and I'll do whatever I can
+to help you get it in front of the right people.
+
+Of course, there were some caveats. Your
+resume had to have an intro-level AWS
+certification on it. And the project spec required
+you to get your hands dirty with source control,
+CI/CD, Python, front-end Javascript, back-end
+cloud services, and more - the full cloud stack.
+Basically, if you could pull off this project, you'd
+be doing things that even some professional
+cloud engineers have never done.
+
+Daniel wasn't a professional cloud engineer.
+He'd never even seen YAML before. So he did
+the first thing that occurred to him: he went out
+and bought a whiteboard. He called what he
+drew there to help him make sense of the
+project an "engineered print," just like he'd
+used countless times as a plumber. He didn't
+know he was drawing a cloud architecture
+diagram.
+
+17
+
+
+
+Daniel's whiteboard (courtesy of Daniel
+Singletary)
+
+Over the weeks that followed, Daniel forced
+himself to sit down at his computer after those
+11-hour days. He grappled with Python and
+Javascript in the back of his work truck. One
+minute he was wrangling sewer pipelines - the
+next minute, CI/CD pipelines.
+
+18
+
+
+
+Let's not ask what's on his shirt. (Courtesy of
+Daniel Singletary)
+
+Finally, miraculously, he completed the
+challenge. I reviewed his code myself; it was
+solid. And you can check out his resume page
+for yourself. It's not flashy, but it contains
+probably the greatest combination of
+
+19
+
+
+
+credentials I've ever seen. Daniel is licensed in
+backflow prevention, journeyman plumbing,
+residential / commercial septic installation …
+and oh yeah, he's earned four certifications on
+AWS.
+
+One of the most important requirements of the
+challenge is to write a blog post about your
+learnings. Daniel's post, A Plumber's Guide to
+Cloud, went viral on LinkedIn and was shared
+more than 200,000 times. That got the
+attention of hiring managers.
+
+And barely a month later, he started his first
+tech job as a cloud DevOps engineer. From all
+reports, he's killing it.
+
+Now, to be clear, Daniel's success didn't come
+from some magic contained in the Cloud
+Resume Challenge. It came from Daniel. It
+came from his hard work, his perseverance,
+and (just as importantly) from the skills he'd
+mastered in his plumbing days.
+
+For instance, if I'm a hiring manager on an
+infrastructure ops team, I'm taking away quite a
+few things from Daniel's story of the leaf-blower
+sewer:
+
+20
+
+
+
+He knows how to troubleshoot.
+Given a fairly enormous problem (this entire
+building stinks), Daniel didn't flail around or try
+random stopgap measures. He narrowed the
+problem down to a root cause (the blowing air)
+and then methodically eliminated possibilities
+until he found the solution.
+
+He knows how to collaborate.
+Daniel worked closely with a colleague
+throughout the onsite engagement, dividing
+and conquering to speed up the "debugging"
+process. Pair programming will feel natural to
+Daniel because he's used to having a sounding
+board to work out complex problems.
+
+He knows how to test and observe.
+Until I met Daniel, I actually didn't know that
+"smoke testing" was a term with a literal
+smoke-related meaning. I'd always heard it
+used in the context of software tests. Daniel
+used a tracing technique to follow a problem to
+its source, instead of just making random
+guesses.
+
+He understands business continuity.
+Daniel had to keep several businesses online
+and operational while conducting his
+diagnostics and resolving the problem. He
+
+21
+
+
+
+couldn't simply flip a switch and cut the
+building's water supply for a few days while he
+figured out what was happening.
+
+Put simply, Daniel had rock-solid real-world ops
+skills, better than that of most university
+computer science graduates I've met. What the
+Cloud Resume Challenge did was fast-track
+Daniel to the hands-on technical abilities he
+needed to build on that wealth of trade
+experience and vault into the cloud.
+
+Daniel's story is unique, but he's not alone.
+Over the past two years, thousands of people
+have attempted the Cloud Resume Challenge.
+The majority of them don't get far; it's not easy,
+that's what makes it worth doing.
+
+But those who persevere have seen incredible
+results. Career-changers have made the jump
+to cloud jobs from fields as diverse as food
+service, HR, retail, and recruiting. And even
+more people have used the challenge to polish
+up their existing IT skills and leverage better
+jobs within the industry.
+
+You'll hear many of their stories in this book.
+Like them, you bring skills and perspectives
+that the tech industry needs. And if you commit
+
+22
+
+
+
+to follow the path I'm about to show you,
+there's no limit to what you can achieve.
+
+Ready? Let's do this.
+
+23
+
+
+
+Part 1: Cracking the Cloud
+Resume Challenge
+
+24
+
+
+
+In April 2020, as the first wave of COVID-19
+descended, I found myself like millions of other
+people around the world: stuck at home,
+feeling bored and helpless.
+
+I did have one huge privilege, though. As a
+tech worker, I could still do my job from home.
+Friends and family were telling me: "I've been
+thinking about changing careers and going into
+IT. Maybe doing something in the cloud, like
+you. Where should I start?"
+
+I started jotting down some ideas: a blueprint, a
+roadmap of key cloud skills. Things that would
+make me say "Of course I'd hire that person!",
+never mind their previous work experience.
+What emerged a few days later would change
+a whole bunch of lives, starting with my own.
+
+The challenge itself
+Here are the sixteen steps of the original Cloud
+Resume Challenge, more or less as they first
+appeared in my "Cloud Irregular" newsletter on
+April 27th, 2020.
+
+1. Certification
+Your resume needs to have the AWS Cloud
+Practitioner certification on it. This is an
+
+25
+
+
+
+introductory certification that orients you on the
+industry-leading AWS cloud – if you have a
+more advanced AWS cert, or a cert on a
+different cloud, that’s fine but not expected. No
+cheating: include the validation code on the
+resume. You can sit the CCP exam online for
+$100 USD. If that cost is a dealbreaker for you,
+let me know and I’ll see if I can help. A Cloud
+Guru offers exam prep resources.
+
+2. HTML
+Your resume needs to be written in HTML. Not
+a Word doc, not a PDF. Here is an example of
+what I mean.
+
+3. CSS
+Your resume needs to be styled with CSS. No
+worries if you’re not a designer – neither am I.
+It doesn’t have to be fancy. But we need to see
+something other than raw HTML when we
+open the webpage.
+
+4. Static S3 Website
+Your HTML resume should be deployed online
+as an Amazon S3 static website. Services like
+Netlify and GitHub Pages are great and I would
+normally recommend them for personal static
+site deployments, but they make things a little
+too abstract for our purposes here. Use S3.
+
+26
+
+
+
+5. HTTPS
+The S3 website URL should use HTTPS for
+security. You will need to use Amazon
+CloudFront to help with this.
+
+6. DNS
+Point a custom DNS domain name to the
+CloudFront distribution, so your resume can be
+accessed at something like
+my-c00l-resume-website.com. You can
+use Amazon Route 53 or any other DNS
+provider for this. A domain name usually costs
+about ten bucks to register.
+
+7. Javascript
+Your resume webpage should include a visitor
+counter that displays how many people have
+accessed the site. You will need to write a bit of
+Javascript to make this happen. Here is a
+helpful tutorial to get you started in the right
+direction.
+
+8. Database
+The visitor counter will need to retrieve and
+update its count in a database somewhere. I
+suggest you use Amazon’s DynamoDB for this.
+(Use on-demand pricing for the database and
+you’ll pay essentially nothing, unless you store
+
+27
+
+
+
+or retrieve much more data than this project
+requires.) Here is a great free course on
+DynamoDB.
+
+9. API
+Do not communicate directly with DynamoDB
+from your Javascript code. Instead, you will
+need to create an API that accepts requests
+from your web app and communicates with the
+database. I suggest using AWS’s API Gateway
+and Lambda services for this. They will be free
+or close to free for what we are doing.
+
+10. Python
+You will need to write a bit of code in the
+Lambda function; you could use more
+Javascript, but it would be better for our
+purposes to explore Python – a common
+language used in back-end programs and
+scripts – and its boto3 library for AWS. Here is
+a good, free Python tutorial.
+
+11. Tests
+You should also include some tests for your
+Python code. Here are some resources on
+writing good Python tests.
+
+12. Infrastructure as Code
+
+28
+
+
+
+You should not be configuring your API
+resources – the DynamoDB table, the API
+Gateway, the Lambda function – manually, by
+clicking around in the AWS console. Instead,
+define them in an AWS Serverless Application
+Model (SAM) template and deploy them using
+the AWS SAM CLI. This is called “infrastructure
+as code” or IaC. It saves you time in the long
+run.
+
+13. Source Control
+You do not want to be updating either your
+back-end API or your front-end website by
+making calls from your laptop, though. You
+want them to update automatically whenever
+you make a change to the code. (This is called
+continuous integration and deployment, or
+CI/CD.) Create a GitHub repository for your
+backend code.
+
+14. CI/CD (Back end)
+Set up GitHub Actions such that when you
+push an update to your Serverless Application
+Model template or Python code, your Python
+tests get run. If the tests pass, the SAM
+application should get packaged and deployed
+to AWS.
+
+15. CI/CD (Front end)
+
+29
+
+
+
+Create a second GitHub repository for your
+website code. Create GitHub Actions such that
+when you push new website code, the S3
+bucket automatically gets updated. (You may
+need to invalidate your CloudFront cache in the
+code as well.) Important note: DO NOT commit
+AWS credentials to source control! Bad hats
+will find them and use them against you!
+
+16. Blog post
+Finally, in the text of your resume, you should
+link a short blog post describing some things
+you learned while working on this project.
+Dev.to is a great place to publish if you don’t
+have your own blog.
+
+30
+
+
+
+Why does the Cloud Resume
+Challenge work?
+Unlike most technical resources you'll find, the
+Cloud Resume Challenge isn't a tutorial or a
+how-to guide. It's a project spec, and not a very
+helpful one at that. It tells you what the
+outcome of the project should be, and provides
+enough structure that you don't go too far off
+the rails, but other than that  - you're on your
+own!
+
+At first glance, this seems like kind of a mean
+thing to hand someone with no previous IT
+experience. Wouldn't beginners need their
+hands held every step of the way? And so my
+initial vision, that the challenge would help
+people get their first job in tech, was greeted
+with skepticism:
+
+31
+
+
+
+Not picking on Cesar here, but it would have
+been smart to take the over on his prediction.
+
+A year later, thousands of people have
+attempted the challenge. Hundreds have
+completed it. Dozens have been hired into their
+first cloud jobs, from fields as diverse as
+banking, plumbing, recruiting, and HR. Never
+bet against raw human determination when
+dollars are on the line.
+
+I didn't choose the challenge format arbitrarily,
+though. I designed it after some of the best
+learning experiences I've ever had: the
+capstone projects in my college and
+graduate-level computer science classes.
+
+No, I'm not saying you need a master's degree
+in computer science to get a job in cloud. But
+good university classes gave me a gift,
+something most vocational training courses
+haven't adopted: open-ended projects that told
+me roughly the direction to go, then forced me
+to figure out how to achieve the objective as I
+went along. Because I wasn't just carrying out
+rote instructions, the learning wasn't
+pre-digested. The learning came from me.
+
+32
+
+
+
+Looking back, most of the good learning I had
+in college came from those types of projects.
+And whether or not you have a degree
+background, I want to give you that experience
+as well.
+
+The biggest surprise to me has actually been
+not how many career-changers have tried the
+challenge, but how many working engineers
+have given it a shot. Here is a breakdown of
+prior experience as reported by the 4000-plus
+community members in the Cloud Resume
+Challenge Discord server:
+
+Number of years of prior professional IT /
+software development experience by
+challenge participants
+
+That's right - almost 40% of challengers are
+coming into this with more than 3 years of
+professional IT experience. It turns out there
+are good reasons (wholly unanticipated by me)
+
+33
+
+
+
+why the Cloud Resume Challenge has value
+for people well-established in their tech
+careers, and we'll get into that later.
+
+But for now, just think of it this way: if the end
+result of the Cloud Resume Challenge is
+impressive enough to make experienced IT
+people say "I want that on my resume", it is
+really going to make you stand out as an
+entry-level job-hunter.
+
+If you give this project a try and realize that you
+hate it, or you’re just not interested, you’ll have
+learned a valuable lesson about whether or not
+you really want a career in the cloud – because
+these are the types of problems that real cloud
+engineers and developers really work on. It's
+not a contrived toy exercise.
+
+But I believe that if you can, in good faith,
+complete the Cloud Resume Challenge, you
+will already have more useful skills than a lot of
+people who graduate from university computer
+science programs. Specifically, you will
+understand something about:
+
+● Full-stack software development (the
+static website and Python pieces)
+
+34
+
+
+
+● Version control (the Github piece)
+● Infrastructure as code (the
+
+CloudFormation / SAM piece)
+● Continuous integration and delivery
+
+(connecting GitHub Actions, SAM, and
+AWS)
+
+● Cloud services and “serverless”
+(Lambda, API Gateway, DynamoDB,
+Route53, CloudFront, S3)
+
+● Application security (IAM, S3 policies,
+CORS, API authentication/authorization)
+
+● Networking, as in the way computers
+talk to each other (DNS, CDNs, the
+whole "cloud" thing)
+
+● Networking, as in the way people talk to
+each other (the blog post, the Discord
+community - this is probably the
+highest-value step in the whole
+challenge because of the professional
+doors it can unlock for you, and we'll talk
+about that in more detail later on.)
+
+I'd recommend preparing a story about your
+experience with each of these bulleted items to
+use in job interviews. The reality is that
+"baptism by fire" is the best way to learn,
+because there's nothing like pounding your
+head against a DNS problem for two days to
+
+35
+
+
+
+burn it into your head in a way that cramming
+for a test never could.
+
+Moreover, you’ll have learned by doing,
+because I didn’t give you enough instructions
+to figure any of this out without going down
+some late-night rabbit holes.
+
+Most importantly, you will have demonstrated
+the number-one skill in a cloud engineer’s
+toolbox: the ability to learn fast and google
+well.
+
+I've spoken with dozens of hiring managers
+over the history of the challenge, and all of
+them insist that "ability to pick up new things
+quickly, in a self-motivated way" is their most
+highly prized quality in a team member, more
+than competence on any specific technology.
+To be perfectly blunt, many of the tools and
+services you've used in the challenge may be
+obsolete in 5 years. But your ability to glue
+them together into something that works will
+remain. It will get you interviews and build your
+confidence that you can thrive in whatever
+technical paradigm comes next.
+
+36
+
+
+
+Breaking down the challenge
+How long will it take you to complete the Cloud
+Resume Challenge?
+
+This really depends on your previous level of
+experience. In a recent community survey, I
+asked a bunch of challengers to self-report
+how many hours they spent working on the
+project. (Note that I didn't ask for an overall
+time window, so I don't know if these people
+are working, say 8 hours a day for 5 days or 2
+hours a night for 20. I also didn't ask them how
+long they spent preparing for their certification,
+since everybody's study habits are different.)
+
+Number of hours to complete the challenge,
+as reported by participants
+
+Huh! The divisions of this pie look pretty similar
+to the ones in the "previous experience" graph
+
+37
+
+
+
+I showed you earlier, with years of experience
+mapping roughly onto faster challenge
+completion. From that similarity, we might draw
+the following weak rule of thumb:
+
+Assume at least 40 hours to complete the
+challenge (not including cert prep time) if
+you have zero prior experience in cloud or
+software development. For each year of
+experience you have up to 3 years, shave
+~10 hours off the expected time.
+
+Your individual mileage will vary, and the
+amount of time you need is ultimately not
+important to the outcome. The challenge is not
+a race. Taking shortcuts (say, by peeking at
+other people's solutions online) just devalues
+your own learning experience. Focus on really
+understanding why you are completing each
+step, not on blazing through them.
+
+With all of the above in mind, here is a sample
+mapping of tasks to time that you may find
+more helpful than the original 16-step order.
+
+How I would approach the Cloud Resume
+Challenge
+
+38
+
+
+
+If you're not sure how you want to tackle the
+16 steps of the challenge, try this method.
+
+Projected Time Commitment: 50-70 hours
+over 6 weeks (adjust expected hours
+downward if you have previous experience)
+
+Week Challenge
+Milestone
+
+Week 0: Certification Complete a Certified
+Prep Cloud Practitioner
+(Challenge Step 1) prep course and
+
+practice exam (10ish
+hours)
+
+Week 1: Front End Get your resume laid
+(Challenge Steps out in HTML. Style it
+2-6) with CSS. Get the
+
+website deployed to
+S3 and fronted with
+DNS / CloudFront.
+(5-10ish hours)
+
+Week 2: Back-End Get source control
+API set up. Get the visitor
+(Challenge Steps counter saving to the
+8-10, 13) database. (10ish
+
+hours)
+
+39
+
+
+
+Week 3: Front-End / Get the visitor
+Back-End Integration counter displaying on
+(Challenge Steps 7, the homepage. Add
+11) tests for your code.
+
+(10-15ish hours)
+
+Week 4: Automation / Get your
+CI infrastructure
+(Challenge Steps 12, automated with SAM
+14, 15) and deploying via
+
+GitHub Actions.
+(10ish hours)
+
+Week 5: The Blog … Sit and pass CCP
+and Beyond exam. Write blog
+(Challenge Steps 1, post.
+16) Celebrate!
+
+(as much time as you
+want/need)
+
+So that's six self-contained chunks of work you
+can do in sequence. If a chunk takes you more
+than a week, or you want to double up, that's
+fine too. You're in the driver's seat here; go at
+your own pace.
+
+40
+
+
+
+Community resources
+The double-edged advantage/disadvantage of
+starting the Cloud Resume Challenge now, as
+opposed to two years ago, is that the
+challenger community has created a ton of
+support resources to help you.
+
+Why is this a disadvantage? Remember, the
+burning pain of sitting up late with fifty tabs
+open, trying to figure out why your API won't
+return anything, is actually the most powerful
+part of the learning experience. And I still
+recommend that you avoid looking at anyone's
+actual solution code if you can help it.
+
+Think of other challenge solutions as spoilers.
+You didn't want to know the ending of
+Avengers: Endgame before you entered the
+theater. Don't let some other developer spoil
+the learning experience and pride of crushing
+the challenge on your own merits.
+
+But with all of that said, there are still some
+wonderful helps and extensions to the
+challenge out there for anyone who's curious,
+masochistic, or just plain stuck.
+
+41
+
+
+
+The Cloud Resume Challenge
+Discord Server
+This is the place to be if you are working on the
+challenge. Join 4000+ other cloud enthusiasts
+ranging from beginners to experienced
+mentors. Ask your challenge questions, get
+code review, view cloud job postings, or just
+chat about cloud and life. It's free and very
+chill. I'm there. What more reason do you
+need? Join us already.
+
+The Cloud Resume Challenge GitHub
+Repository
+The Cloud Resume Challenge is open-sourced
+here, and this repository has also become a
+community destination for additional projects
+created in the spirit of the original challenge. If
+you want to give back to the community, this is
+a great place to do so.
+
+The Cloud Resume Challenge Video
+Tutorials
+Lou Bichard, founder of "Open Up The Cloud"
+and tireless friend of the challenge, has put
+together a comprehensive video series walking
+
+42
+
+
+
+through each step of the original AWS
+challenge. If you're a visual learner, or are
+having trouble figuring out a specific step,
+Lou's videos are a fantastic resource. His
+associated GitHub repository also curates a
+nice selection of blogs written by challenge
+champions.
+
+The Challenge in Spanish
+Challenger Jesus Rodriguez generously gave
+his time to translate the original challenge, as
+well as some FAQ, into Spanish. If you'd like
+the Cloud Resume Challenge translated into
+another language and have the know-how to
+do so, please reach out - we'll figure out a way
+to make it freely available on the challenge
+homepage.
+
+More AWS Challenges
+When I worked at A Cloud Guru, I
+spearheaded an effort to extend the general
+challenge format to a variety of technical
+projects, and the response has mostly been
+pretty good. Note that each of these projects
+includes "extra credit" ideas for making it your
+
+43
+
+
+
+own - take advantage of that, as most folks
+don't!
+
+● Event-Driven Python on AWS
+I wrote this project myself, and so I'm
+glad that it seems to have helped a lot of
+people. It takes really core,
+bread-and-butter enterprise cloud skills
+(working with data warehouses, ELT
+pipelines, Python, and events), mixes
+them with some timely COVID-19 data
+sets, and walks you through building a
+real-time dashboard that's sure to start a
+conversation. A great project to take into
+a data or DevOps engineering interview.
+
+● Machine Learning on AWS
+Build a movie recommendation engine
+with AWS ML Hero Kesha Williams. This
+one is *tough*. It's one of the rare cases
+where you'll gain plenty of learning even
+if you start by reading her follow-up blog
+where she explains exactly how she did
+it. Great for data scientists and data
+engineers.
+
+● Improving application performance
+on AWS
+
+44
+
+
+
+Here's where you can get your hands
+cloudy with some good old-fashioned
+servers. Stand up a web app, figure out
+how to make it faster with judicious use
+of caching. A great project to take into a
+cloud architect interview.
+
+Part 2: Challenge
+walkthrough
+
+45
+
+
+
+Setup and safety (before you
+begin)
+Warning: The cloud is a power tool, and if
+you're not careful it will slice off your thumb.
+
+Before you start this project, you'll want to take
+necessary precautions to protect your
+information, your sanity, and your wallet.
+
+Do not proceed with the challenge steps until
+you have read and implemented the safety
+prerequisites below.
+
+Access and credentials
+You'll access the AWS cloud in two ways:
+through the web interface (the "console"), and
+via code from your laptop or other services.
+Every cloud action you take - whether you are
+creating a new resource or just retrieving a list
+of your current ones - requires access
+credentials.
+
+There are two ways you can set up an AWS
+personal development environment: the
+original way, and the professional way (the
+way I recommend). Choose the old way if you
+want a well-trodden path with lots of online
+help; choose the way I recommend if you want
+
+46
+
+
+
+to use AWS the way the pros do it. The way I
+recommend will also make some of the
+advanced challenge mods significantly easier.
+
+The original way (if you must)
+1. Create an AWS account.
+2. To access AWS from code or CLI
+
+commands you run on your laptop, you'll
+need to set up some configuration files
+on your local machine. Many
+challengers like to use a third-party tool
+such as aws-vault or awsume to help
+with configuring IAM user credentials
+and assuming IAM roles; those tools are
+recommended but not required.
+
+If you do choose this setup method, heed the
+following security warnings:
+
+● Never use your "root account" for
+anything except initial account setup,
+and make sure you enable MFA
+(multi-factor authentication) on it.
+
+● Instead of using the root account, create
+an IAM user (enable MFA on this too) to
+manage your own access to your AWS
+account.
+
+● Best practice is not even to use this IAM
+user directly, but to have the user
+
+47
+
+
+
+assume an IAM role for any actions you
+take against AWS. Temporary
+credentials are always safer than
+long-lived ones.
+
+● Never, under any circumstances,
+publish AWS access credentials such as
+your IAM user access key ID and secret
+access key in any public location such
+as a blog or GitHub repository. Attackers
+crawl the web with automated scripts to
+harvest these credentials and use them
+against you. If you do realize that you've
+leaked a credential, revoke it
+immediately so it can no longer be used.
+
+The professional way (my recommendation)
+Most professional cloud engineers don't
+configure AWS credential files on their
+machines anymore. That's partly for security
+reasons, and partly because they're usually not
+working with just one AWS account. Modern
+cloud shops use dozens or even hundreds of
+different AWS accounts, typically managed
+through AWS Organizations. And we're going
+to use Organizations, too:
+
+1. Create an initial AWS account. This
+account will ONLY be used for AWS
+
+48
+
+
+
+Organizations / SSO setup. You will not
+be using it to build any applications.
+Guard the root password to this account
+with your life (ie, with a good password
+manager).
+
+2. Set up your AWS Organization in this
+"root" account. You may not be part of
+an actual cloud organization yet, but you
+can still be organized. I recommend
+using AWS Organizations to manage
+your personal accounts, even if you only
+have one AWS account to start with.
+The lovely open source tool
+org-formation will help you set up your
+organization (it's better and cheaper
+than AWS-native tools like Control
+Tower, and it has the advantage of
+generating all your org setup as
+infrastructure-as-code config). Start by
+reading their illustrated how-and-why
+Organizations explanation.
+
+3. Create a couple of OUs
+(Organizational Units) inside the
+Organization to hold your accounts. I
+suggest creating at least one for
+"production" (live, user-facing) services
+and one for "test" experiments. You can
+always add more or rearrange these
+later.
+
+49
+
+
+
+4. Create a new AWS account inside
+each OU. This is the account you will
+actually build stuff in. Again, read the
+org-formation docs on how to do this.
+(Use the + suffix on your root email
+address so you don't have to create new
+email addresses for your new accounts -
+just make sure your email provider
+supports that. I know Gmail does.) Make
+sure you are using a password manager
+to keep track of the root passwords for
+these and any other AWS accounts you
+create within your organization.
+
+5. Next, you're going to set up AWS SSO
+(Single Sign-On) in your "root" AWS
+account to log into the other AWS
+accounts in your organization. The pros
+typically use AWS SSO so they can log
+into AWS using their organization's
+identity provider like Okta - but you can
+totally use it for a personal setup without
+needing to involve any third-party
+services. Follow this outstanding tutorial,
+the best I've seen, to make the setup
+easy. Make sure to set up MFA for your
+SSO user.
+
+6. Finally, you'll want an easy way to log
+into AWS SSO from your command
+line. AWS SSO has an official CLI, but
+
+50
+
+
+
+you can also try Ben Kehoe's
+aws-sso-util for some additional
+features.
+
+7. When you're done, you should be able
+to pop open an AWS console from your
+command line to reach your target
+accounts - no long-lived credentials
+required.
+
+Yes, this is a few more steps than the old way
+of doing things (it's actually a useful
+mini-project in and of itself). But follow those
+steps, and you'll be managing and accessing
+AWS the way professional cloud teams do -
+which will pay off dividends throughout this
+challenge.
+
+Billing
+You can play with many services on AWS for
+free, within limits. I designed the Cloud
+Resume Challenge to use resources that fall
+primarily within the free tier. If you're not sure
+whether a service you're about to use will cost
+you money, check the free tier docs first.
+
+However, the cloud's billing model is designed
+primarily to make it easy for businesses to
+consume services, and that means it can cost
+you significant money if you're not careful. It's a
+
+51
+
+
+
+good idea to set up AWS billing alerts and keep
+an eye on the billing console to keep apprised
+of any charges before you see them on your
+credit card bill. But be aware that the billing
+alerts operate on a delay of several hours.
+
+As above, keep in mind that attackers would
+very much like to gain access to your AWS
+account so that they can run their own
+workloads, such as expensive Bitcoin mining
+operations, on your credit card. Guard your
+AWS credentials as if they're the keys to your
+bank account; they basically are.
+
+The best way to avoid unexpected cloud
+charges is simply to delete any resources
+you're not using, as soon as you're done using
+them. This is another place where AWS
+Organizations provides an advantage. If you're
+done using a test account, you can just delete
+it - that's the sure way to end all charges
+associated with the project.
+
+If you do run into a large unanticipated charge -
+say, you thought you deleted all the resources
+from a tutorial you worked through, but missed
+a GPU instance and got charged $200 -  it's
+always a good idea to contact AWS before you
+
+52
+
+
+
+panic. Their customer support will often forgive
+all or part of the bill on a first mistake.
+
+Cloud hygiene
+A few general rules for safe and healthy cloud
+living:
+
+● Make a new AWS account for each
+project you work on.
+
+● Clean up after yourself at the end of
+each work session - don't leave services
+running if you don't need them.
+
+● Use temporary credentials everywhere
+you can.
+
+● Use infrastructure-as-code (IAC) to
+define any resources you plan to keep.
+We'll spend much more time learning
+how to do this in Challenge Chunk 4.
+
+● Whenever possible, build using
+"serverless"-style managed services that
+only charge you for actions you take,
+rather than server-based systems that
+run all the time and bill you 24/7.
+
+● When you're done building something
+and don't need to run it anymore, delete
+the AWS account out of your
+organization. (If you've used proper
+infrastructure-as-code, you haven't lost
+
+53
+
+
+
+anything - you can just deploy the code
+in a new account later!)
+
+54
+
+
+
+Chunk 0: Certification prep
+We'll dig into the challenge proper in the next
+section (though it's fine to work ahead!). In this
+chunk we are focused on certification prep.
+The goal is to take an initial practice
+certification exam for the AWS Certified Cloud
+Practitioner (or another, more advanced AWS
+cert - your choice) to set a knowledge baseline.
+You can take the actual cert exam whenever
+you're ready. I suggest putting it on the
+calendar now - there's nothing like a deadline
+to get you serious about studying.
+
+How to approach this chunk
+Certification is the only step that you can
+complete literally at any point in the challenge.
+You can do it up front, save it til the end, or
+study for your cert while you are completing
+other steps. In that sense, it's disconnected
+from the rest of the challenge.
+
+But let’s get real about certs for a minute. I’ve
+yet to meet a hiring manager who believes that
+IT certifications guarantee technical ability.
+(And let’s be honest, you wouldn’t want to work
+for someone who believed that.) A cert is just a
+piece of paper, after all — and that’s only if you
+print out the PDF. It doesn’t magically give you
+
+55
+
+
+
+the experience you need to succeed in the real
+world.
+
+And yet, cloud certification has been helpful in
+my engineering career, and I encourage it for
+everyone looking to get a foothold in the
+industry. Certs are powerful tools, as long as
+you understand what they are and are not
+good for.
+
+Certs give you a comprehensive knowledge
+base
+You may not have a traditional computer
+science degree. But if you work through, say,
+the AWS Certified Solutions Architect
+Associate certification, you will get exposed to
+the core AWS services and architecture
+
+56
+
+
+
+patterns that industry professionals use. You
+won’t have to worry that you missed big topic
+areas in your job prep. The cert puts it all in
+one place. Very convenient. In this sense, it
+almost doesn’t matter whether or not you ever
+sit the cert exam! Just studying the material
+gives you the real value.
+
+Certs help you get interviews
+When a recruiter is reading through your
+resume, a cloud certification does stand out. It
+says you’re serious about the field and that
+there is some external validation of that —
+especially if you are missing a traditional
+credential like a college degree in computer
+science. The cert’s not going to get you the job,
+but it might get your foot in the door for the
+interview.
+
+Certs are a big advantage … for one
+particular type of job
+Professional services companies like
+consulting shops and MSPs are among the
+biggest employers of cloud-certified people.
+That’s because certs are very valuable in the
+consulting world:
+
+● Certification counts help the consulting
+companies maintain important
+partnerships with cloud providers like
+
+57
+
+
+
+AWS and Microsoft. More people with
+certs add up to higher partnership tiers
+and better benefits.
+
+● Certs help communicate expertise to the
+consultants’ clients. If I’m hiring an
+outside consultant, I want to see
+credentials!
+
+● They are required for certain types of
+consulting engagements (for example,
+AWS only allows certified Solutions
+Architect Professionals to conduct an
+official AWS Well-Architected Review).
+
+Big consultancies have a bottomless appetite
+for cloud-certified professionals … assuming
+you actually know what the cert says you know,
+of course! So you really open up your job
+options by getting certified.
+
+How many certs do I need
+before applying to cloud jobs?
+Is the Certified Cloud
+
+Practitioner really enough?
+
+I recommended the CCP in the original
+challenge because I like it as a formalized
+way to introduce beginners to cloud concepts
+- not so much because it is impressive to
+
+58
+
+
+
+hiring managers. The CCP (or an equivalent
+cert such as Azure's AZ-900 or Google
+Cloud's Digital Leader) is really intended
+more for nontechnical roles.
+
+So, here's a pro tip: I think that nearly
+everyone I've seen get their first cloud job
+through the Cloud Resume Challenge had
+earned a more advanced certification,
+such as one or more of the AWS
+associate-level technical certs. I've seen a
+few exceptions to this rule, but not many.
+
+While in one sense, more certs are always
+better (I’ve never *not* been impressed by
+someone who holds all 12 AWS certifications
+— that’s an impressive achievement by any
+definition), you do reach a point where you
+need to focus on building other skills.
+Otherwise, you run the risk of appearing like
+you are all head knowledge and no practical
+ability. That's what the rest of the challenge is
+for.
+
+Helpful resources
+In this section, I'll try to provide some
+resources that will make your life easier if you
+take the time to read them before diving into
+
+59
+
+
+
+your hands-on work. Since this chunk is about
+certification, I'll list some recommended cert
+prep resources. I don't get affiliate credit or
+anything for mentioning these; they're just my
+personal recommendations based on having
+been around the space for awhile.
+
+Paid resources
+For hands-on labs: A Cloud Guru. I used to
+work at ACG and was repeatedly impressed by
+the quality of the cloud playground
+environments when I did - they're the same
+technology that was formerly the best thing
+about Linux Academy. With one click you can
+get a fresh AWS (or Azure or Google Cloud)
+sandbox that stays live for several hours of
+learning time. Best thing about that: it removes
+the worry of standing up resources on your
+credit card and getting a surprise bill.
+
+For AWS cert study: Adrian Cantrill's one-man
+cert empire. Not the cheapest, but comes with
+a vibrant community and Adrian's legendary
+attention to detail - he's a living example of the
+truth that the greatest competitive advantage is
+simply caring more about quality than
+everybody else.
+
+60
+
+
+
+For realistic practice exams: Jon Bonso of
+Tutorials Dojo is the way to go. His exams are
+realistic without being rip-offs. Beware of exam
+dumps in shady subreddits - they're no way to
+learn, and plus they violate your exam
+agreement with AWS.
+
+Free resources
+Andrew Brown has a number of AWS cert
+courses available for free through
+freeCodeCamp.
+
+Mods
+In each "Mods" section, I'll offer some
+suggestions on how you can extend that
+portion of the challenge to incorporate
+additional learning; to go "above and beyond"
+in your pursuit of cloud excellence. Since we're
+talking about certifications here, I'll give some
+advice on what certs you might want to try,
+going beyond the baseline CCP cert,
+depending on what your career goals are.
+
+DevOps Mod: If you have several years of
+existing IT experience
+Skip the associate-level cloud certs; go straight
+for a professional-level certification such as the
+AWS Certified Solutions Architect Professional
+
+61
+
+
+
+or DevOps Professional. You are sending a
+signal that you are not here to mess around:
+you are in fact an IT Pro and you have the
+paper to - well, if not to prove it, at least to not
+contradict it. Be aware that these certifications
+are quite difficult; they consist of page-length
+questions that ask you to make complex
+architectural decisions involving many moving
+parts. You will get multiple hours to take the
+exam and you will likely need them. But it's
+worth it if you want to make a smooth transition
+from your existing IT job to a mid- or
+senior-level cloud position.
+
+Security Mod: If you want a cloud security
+job
+I would suggest getting the AWS Solutions
+Architect Associate cert followed by the
+Security specialty cert. In my experience, cloud
+security applicants tend to stand out more if
+they have strong programming and automation
+skills, so it might not hurt to look into the
+Certified Developer Associate exam as well.
+This is on top of any non-cloud security certs
+you might pursue.
+
+62
+
+
+
+Developer Mod: If you want to become a
+cloud developer
+If you are going for a cloud software
+engineering job, forget certs, including the
+Certified Developer Associate. Certs are going
+to be of no help in those interview loops. You
+are on the leetcode train now, my friend.
+
+Developer Mod: If you are about to graduate
+from college with a computer science-y
+degree
+Be aware that your college degree is by far a
+more valuable credential than any particular
+cloud certification. If you have the time and
+means to get a cloud certification too, I would
+just go for the Solutions Architect Associate as
+a nice resume-rounder-outer. You are
+supposed to be a generalist at this point on
+your career track; I wouldn't worry about
+picking up any pro or specialty-level certs until
+you get some experience.
+
+Stacy's story: From IT Service Desk
+Manager to Cloud Operations
+Engineer
+
+63
+
+
+
+How long it took Stacy to complete the Cloud
+Resume Challenge: 50 or so hours, spread
+over 6 weeks
+
+How long it took Stacy to get a cloud job after
+completing the challenge: 1 month
+
+What was your background in IT before
+turning to cloud?
+
+I'd been working in IT for several years with a
+Windows administration focus, but I wanted
+to specialize in cloud for career growth.
+
+When I found the Cloud Resume Challenge, I
+thought it looked like a great way to learn
+cloud tech by getting hands-on experience
+and completing a project that could be added
+to a resume or used as a talking point in
+interviews.
+
+How did you use the challenge during
+interviews?
+
+When I was asked about AWS experience,
+what AWS services I was familiar with, or
+technical questions (the difference between
+public vs. private subnets, describe a 3-tier
+
+64
+
+
+
+architecture), I was able to bring up my work
+in the challenge as examples. Due to the
+wide variety of commonly used AWS
+services that were incorporated into the
+challenge, it was easy to use that as a talking
+point.
+
+Any advice for other upskillers such as
+yourself?
+
+Don't give up! The jobs are out there, but you
+need to find the right environment for growth.
+A lot of cloud jobs are geared towards
+senior-level people with years of experience,
+but there are companies out there that are
+willing to grow their own.
+
+Doing the Cloud Resume Challenge will set
+you apart and show that you have the
+curiosity, resilience, and motivation to make a
+career in cloud.
+
+Also, while you are interviewing, start
+learning Terraform and Linux administration.
+Those two skills will help you immensely both
+during the interview process and on the job.
+
+65
+
+
+
+Pause to reflect
+Have you taken your initial practice exam?
+Great! Take a few moments to think about what
+you've learned so far.
+
+● What are the top 2-3 areas of cloud that
+you feel least comfortable with right
+now?
+
+● When do you plan to take your
+certification? What's your study plan
+between now and then?
+
+● What other areas of DevOps or software
+development do you want to get better
+at outside of cloud certification?
+
+In a notes app or text file, write down your
+answers to these questions. This will come in
+handy later when it's time to write your blog
+post. Trust me, you do not want to be staring at
+a blank piece of paper at the end of this
+project!
+
+Remember that you can also discuss these
+questions with your colleagues in the CRC
+Discord server.
+
+66
+
+
+
+Chunk 1: Building the front end
+At the end of this chunk, you will have created
+and deployed a cloud-hosted resume at a live
+URL that you can share with anyone. (That's
+right!) Here are this chunk's steps again as a
+reminder:
+
+(Challenge Steps 2-6)
+
+2. HTML
+Your resume needs to be written in HTML.
+Not a Word doc, not a PDF. Here is an
+example of what I mean.
+
+3. CSS
+Your resume needs to be styled with CSS.
+No worries if you’re not a designer – neither
+am I. It doesn’t have to be fancy. But we
+need to see something other than raw HTML
+when we open the webpage.
+
+4. Static S3 Website
+Your HTML resume should be deployed
+online as an Amazon S3 static website.
+Services like Netlify and GitHub Pages are
+great and I would normally recommend them
+for personal static site deployments, but they
+
+67
+
+
+
+make things a little too abstract for our
+purposes here. Use S3.
+
+5. HTTPS
+The S3 website URL should use HTTPS for
+security. You will need to use Amazon
+CloudFront to help with this.
+
+6. DNS
+Point a custom DNS domain name to the
+CloudFront distribution, so your resume can
+be accessed at something like
+my-c00l-resume-website.com. You can
+use Amazon Route 53 or any other DNS
+provider for this. A domain name usually
+costs about ten bucks to register.
+
+How to approach this chunk
+Many people find that setting out basic HTML
+and CSS is the easiest part of the challenge for
+them, and so they speed through steps 2-6
+only to find that the challenge gets much more
+difficult around step 7.
+
+This is not because front-end development is
+easy. It's because the challenge has very
+
+68
+
+
+
+limited, basic requirements for the static site. I
+did this by design, for a couple of reasons:
+
+● I'm not a front-end developer, and I'm
+not qualified to set you a really
+cutting-edge web development
+challenge!
+
+● You are probably not going to be
+slinging a lot of front-end code in a cloud
+engineering role. You're going to be
+interviewing for infrastructure and ops
+jobs where your ability to center a div is
+not that relevant.
+
+Creating the static site is more about
+completeness, and about having a project you
+can easily demo in an interview, than it is about
+building a web client that will really knock
+everyone's socks off. (Though I've seen some
+really slick challenge sites out there!)
+
+But that said, having to work with gluing a front
+end and a back end together is SUPER
+important. Part of what makes steps 7 and
+following such a challenge is that you're not
+just creating an API in a vacuum. You have to
+figure out how to communicate securely with a
+browser, handle client-generated errors,
+
+69
+
+
+
+account for cache, and all sorts of other things
+that cloud engineers deal with every day.
+
+All of which is to say: don't get complacent
+here! You are getting the pieces in place for the
+big challenges to follow.
+
+Why does the Cloud Resume
+Challenge ask me to upload my
+website to an S3 bucket and
+
+figure out DNS and HTTPS by myself
+instead of using a purpose-built cloud
+static website service like AWS Amplify?
+
+In general, the best tool for a cloud job is "the
+most fully-managed service that meets your
+needs." So yes, using AWS Amplify, or Azure
+Static Web Apps, or a third-party static
+hosting service like Netlify or GitHub Pages,
+would be the fastest and easiest way to
+accomplish this week's portion of the
+challenge. Heck, cloudresumechallenge.dev
+runs on Netlify, and I have no reason to make
+a change at this point.
+
+The reason I want you NOT to use those
+services for this project is because I really
+want you to understand and grapple with
+
+70
+
+
+
+DNS, SSL certificate setup, and cloud
+storage. The reality is that most projects you
+will encounter in the work world will not fit
+neatly onto a static hosting service. But they
+will require you - over and over again - to
+deal with the basic building blocks of cloud
+storage, authentication, and networking.
+
+In a job interview, you are not going to get
+asked to explain how you would follow the
+prompts in an Amplify dialog. But you might
+very well get asked to explain how DNS
+works. And you will remember the answer to
+that question much better if you do the Cloud
+Resume Challenge the way I've suggested.
+
+But in future, when you're standing up a
+static site about your Magic the Gathering
+card collection, just use Netlify. It'll be faster,
+and probably cheaper as well.
+
+Helpful resources
+
+HTML / CSS
+If you're brand-new to HTML and CSS, there
+are endless tutorials out there. Codecademy
+seems to have plenty of good ones, though I'm
+
+71
+
+
+
+not sure if they're all free. I also must
+recommend CSS Tricks, the greatest source
+for CSS articles and guides on the web - much
+of it's advanced stuff, but if you want to
+continue your learning in this area you should
+subscribe to them right away.
+
+Static website tutorials
+The actual cloud part of this chunk of work is
+pretty tutorial-friendly; if you follow these four
+tutorials from AWS on static site setup,
+CloudFront setup, alternate domain names,
+and HTTPS for CloudFront, you'll be 90% of
+the way there.
+
+DNS and CDNs
+CloudFlare (a CloudFront competitor) has an
+excellent series of articles explaining the theory
+behind DNS and CDNs. They also have a
+quick and easy diagnostic center for HTTPS
+issues. And, for good measure, their domain
+registry might be the best place to buy your
+website domain name, since they don't have
+any markups or hidden fees.
+
+I am also a massive fan of the interactive DNS
+tutorials created by Julia Evans. DNS Lookup
+lets you explore the DNS servers behind your
+own site; even more epically, Mess With DNS
+
+72
+
+
+
+is a free DNS sandbox that includes tutorials to
+help you understand the limits and
+ramifications of what DNS can do.
+
+Actual CRC sites
+For inspiration, here's a curated list of actual
+challengers' websites maintained by
+community member Lou Bichard.
+
+Jerry's story: From respiratory
+therapist to Associate Solutions
+Architect at AWS
+
+How long it took Jerry to compete the Cloud
+Resume Challenge: About 20 hours over the
+course of 1 week
+
+How long it took Jerry to get a cloud job after
+completing the challenge: 1 month
+
+So you had never worked in tech before
+tackling the challenge?
+
+I worked nearly 14 years as a respiratory
+therapist and in a healthcare management
+role.
+
+73
+
+
+
+I had certifications and other small projects
+for my portfolio but I wanted to accomplish a
+build that would give me hands-on
+experience with a broad range of services.
+Something I could explain in-depth and
+walkthrough in an interview situation.
+
+How much did the certs help you get
+hired, as opposed to the project
+experience?
+
+I had 4 AWS certifications. I would say it was
+a bonus to have getting my name in front of
+the right people but ultimately getting
+hands-on and understanding the HOW and
+WHY was the most beneficial aspect. For
+anyone who asks for advice that’s the first
+thing I mention. Do the Cloud Resume
+Challenge or compatible challenge and get
+your hands on the console and CLI.
+
+How did you use the challenge during
+interviews?
+
+When interviewing with Amazon, the Cloud
+Resume Challenge was a big talking point for
+me. When going through the interview “loop”,
+
+74
+
+
+
+everyone seemed to be impressed with the
+range of services used within this one
+project.
+
+I also had to build something myself to demo
+during the interview process and included
+some skills I got from the Challenge to build
+a serverless transcoding pipeline integrated
+with my Synology NAS, Elastic Transcoder
+and Lambda functions.
+
+What do you wish someone had told you
+during that 4-month job search?
+
+Don’t. Give. UP! Keep pushing. No matter
+how hard someone says it might be, no
+matter how frustrated you may get at times,
+keep learning and stay positive. Imposter
+syndrome is a real thing and we ALL deal
+with it at some point in our careers.
+
+Get hands-on experience building and
+architecting, anticipate failure and re-build
+again until you nail that project/build. As
+AWS CTO Werner Vogels famously said,
+“everything fails all the time." Keep pushing,
+keep building, and keep your head up in the
+clouds.
+
+75
+
+
+
+Mods
+
+Developer Mod: Frame Job
+If you have a little bit of front-end knowledge or
+ambition, you may not be satisfied with
+dumping some HTML and CSS into an S3
+bucket. You may want to build your front end
+using one of the following Javascript
+frameworks:
+
+● Next.js
+● React
+● Vue
+● Svelte
+
+At the very least, I'd recommend using a static
+site framework such as Hugo or Jekyll. This will
+make your site more maintainable over time
+than a single giant HTML file, and open up
+opportunities for you to integrate the many
+features of those platforms and their templates.
+
+DevOps Mod: Automation Nation
+This is a forward-looking mod that requires
+several skills we won't officially touch on until
+Chunks 3 and 4. Feel free to come back to this
+
+76
+
+
+
+mod then, or jump into it now if you're feeling
+confident.
+
+The official challenge spec doesn't technically
+require you to port your front-end resources to
+infrastructure-as-code, but I think you should
+do it if you have time. Creating S3 and
+CloudFront config is great practice, and this
+way you can run an end-to-end test that uses
+browser automation.
+
+1. Make sure you have a GitHub repository
+set up for your website code and
+configuration.
+
+2. Convert your S3, Route53, and
+CloudFront resources to
+infrastructure-as-code (IaC) using
+CloudFormation, Terraform, or whatever
+IaC tool you plan to use in Chunk 4.
+
+3. Create GitHub Actions to automatically
+build and deploy updates to your static
+site. I recommend creating a three-step
+workflow, as follows:
+
+● Build step. Run any build
+commands necessary to get your
+website ready to deploy -
+depending on what front-end
+framework / generator you are
+
+77
+
+
+
+using, this may take a few
+seconds.
+
+● Deploy step. Deploy your IaC
+configuration to create or update
+your cloud resources such as the
+bucket and CDN, then sync your
+updated website files to the
+bucket. You will also want to clear
+your CDN cache here.
+
+● Smoke test step. Here's where
+you can run Cypress tests
+against the website itself, to
+make sure it looks and acts the
+way you expect. See Chunk 3 for
+more discussion of Cypress.
+
+Confirm your automation works by nuking your
+manual website deployment and deploying it
+by pushing a change to your repository. Look
+Mom, no hands!
+
+Security Mod: Spoof Troop
+An advanced project mod that will be a great
+choice if you're looking toward a cloud security
+role. Protect your DNS setup from potential
+spoofing ("man-in-the-middle") attacks by
+configuring DNSSEC for your site domain
+name.
+
+78
+
+
+
+● Note that not every domain registrar
+supports configuring DNSSEC, but
+Route53 does.
+
+● If you use Route53, you will need to set
+up an AWS KMS key to help, and
+configure rotation of that key (you'll want
+to automate this).
+
+Pause to reflect
+When you've completed Step 6, and you're
+accessing your live site over HTTPS at your
+custom domain name, take a deep breath and
+celebrate! Even if you stop working on the
+project right here, you've still created
+something of value that can be a useful piece
+of your professional presence for years to
+come. Then, while your work is still fresh in
+your mind, write down answers to the
+questions below.
+
+● What aspect of Chunk 1's work did you
+find the most difficult?
+
+● Note one or two problems you
+overcame to get the static site deployed;
+include the error messages or
+screenshots of the issues, and write
+down what you did to fix them.
+
+● What's something you'd have done
+differently, or added, if you'd had more
+
+79
+
+
+
+time?
+● If you tried one of the mods, note what
+
+you did, and how it's an improvement
+over the basic challenge requirements.
+
+80
+
+
+
+Chunk 2: Building the API
+We're going to break up the "visitor counter"
+piece of the project - which requires creating a
+cloud-based API that communicates with our
+website - over this chunk and next. By the end
+of this section, we'll have a working AWS
+serverless API that updates the visitor count in
+a database. We'll also store our Python code in
+a GitHub repository, so we can track changes
+to it over time.
+
+(Challenge Steps 8-10, 13)
+
+8. Database
+The visitor counter will need to retrieve and
+update its count in a database somewhere. I
+suggest you use Amazon’s DynamoDB for
+this. (Use on-demand pricing for the
+database and you’ll pay essentially nothing,
+unless you store or retrieve much more data
+than this project requires.) Here is a great
+free course on DynamoDB.
+
+9. API
+Do not communicate directly with DynamoDB
+from your Javascript code. Instead, you will
+need to create an API that accepts requests
+
+81
+
+
+
+from your web app and communicates with
+the database. I suggest using AWS’s API
+Gateway and Lambda services for this. They
+will be free or close to free for what we are
+doing.
+
+10. Python
+You will need to write a bit of code in the
+Lambda function; you could use more
+Javascript, but it would be better for our
+purposes to explore Python – a common
+language used in back-end programs and
+scripts – and its boto3 library for AWS. Here
+is a good, free Python tutorial.
+
+13. Source Control
+You do not want to be updating either your
+back-end API or your front-end website by
+making calls from your laptop, though. You
+want them to update automatically whenever
+you make a change to the code. (This is
+called continuous integration and
+deployment, or CI/CD.) Create a GitHub
+repository for your backend code.
+
+How to approach this chunk
+
+82
+
+
+
+There are a lot of half-finished Cloud Resume
+Challenges out there that never get past steps
+7-10. Because this is the part where you have
+to write legit code, in both Python and
+Javascript. If you have not written code in a
+programming language before (and, frankly,
+even if you have) it is painful, time-consuming,
+and open-ended … even though when you
+finally get done, you'll probably find that you've
+really not had to write that many lines of code
+at all.
+
+So this is the part of the challenge that
+separates the wannabes from the champions.
+If you can build the back end of the Cloud
+Resume Challenge, you can do anything.
+Specifically: you can get hired as a cloud
+engineer. I'm quite confident of that.
+
+OK, enough hype. It's a big chunk of work.
+Here's how I would break it down. You should
+be able to find online tutorials that cover each
+of these individual steps.
+
+Goal 1: Get your Lambda function talking to
+the database (challenge step 8)
+
+1. Set up a Python Lambda function using
+the AWS web console (don't worry about
+using SAM yet).
+
+83
+
+
+
+2. Set up a DynamoDB table, again using
+point and click.
+
+3. Figure out how to write the Python code
+in your Lambda function that will save a
+value to the DynamoDB table. You'll just
+be testing your Lambda function from
+the console at this point. You'll need to
+figure out IAM permissions between the
+function and the table as well.
+
+Goal 2: Trigger your Lambda function from
+the outside world (challenge step 9)
+
+1. Put an API Gateway route in front of
+your Lambda function, still using the
+web console. I would suggest using a
+POST HTTP method, since this method
+is typically used when API resources are
+updated, and you are going to be
+incrementing the visitor counter in your
+database every time this function is
+called.
+
+2. Make sure you can test the function
+from the API Gateway's internal test
+console and get some sort of "Hello
+World" response back from your code.
+You may need to workshop permissions
+a bit.
+
+3. When this is working, grab the public
+URL for your gateway and test it using
+
+84
+
+
+
+an external API testing service like
+Postman. You want to see the same
+output from your Lambda function there.
+
+Goal 3: Trigger your Lambda function from
+your static site (challenge step 7 - the next
+chunk!)
+
+If you can get through these three chunks of
+work, you've solved the back end. And that
+means that you're going to get two-thirds of the
+way there in this section. (I know, I know.
+Easier said than done. If you're budgeting time
+for the challenge and you're new to cloud and
+code, expect to spend easily 60% of your
+overall time commitment on these three
+chunks.) You can do it; I believe in you.
+
+Why are we building the API
+"serverlessly"?
+
+The "AWS serverless stack" of Lambda, API
+Gateway, and DynamoDB isn't the only way
+to build an API. In fact, it's a fairly new way;
+through much of IT history, web services
+have run on servers (or, at least, abstracted
+servers called "virtual machines"). There are
+
+85
+
+
+
+three reasons I'm asking you to build your
+API on higher-level services instead:
+
+● Ease of use. "Serverless" doesn't
+mean your API won't have servers
+underneath it (it will), but that you
+won't have to worry about them,
+because they're managed by the
+cloud provider. All you have to do is
+focus on writing your code and getting
+the configuration right to connect the
+managed services together.
+
+● Cost efficiency. A traditional virtual
+machine runs all the time, even when
+it's not handling requests. In the cloud
+world, that means you get billed all the
+time. Since serverless functions only
+run in response to events, usually for
+just fractions of a second, they are
+extremely cost-effective. You will not
+pay anything to run the code for your
+visitor counter unless your API
+receives millions of hits per month.
+
+● The "new and shiny" factor. While
+many cloud shops are still running
+older, traditional server-based
+architectures, there's wide interest
+throughout the industry in exploring
+
+86
+
+
+
+more managed cloud technologies
+where they make sense. By getting
+your feet wet with serverless, you're
+actually placing yourself on the cutting
+edge. Many of your interviewers may
+not even have as much experience
+with serverless as you do. Standing
+out can be a good thing!
+
+That said, if you really want to serve your
+website using a more traditional web hosting
+architecture, you're certainly welcome to. Lou
+Bichard and Tony Morris have even created a
+modified Cloud Resume Challenge that helps
+you do that. Just watch those costs!
+
+Helpful resources
+
+Python
+If you are new to writing Python, expect to
+budget a fair amount of time for learning in this
+section, before you get into the actual project
+steps.
+
+As with CSS, there's such an embarrassment
+of tutorials out there that it can be
+overwhelming to know where to start. If you
+
+87
+
+
+
+like learning from books, try O'Reilly's; if you
+prefer videos, here's freeCodeCamp's; for
+hands-on tutorials, python.org has a marvelous
+list. Candidly, there's so much good free stuff
+out there that I probably wouldn't consider
+paying for a course.
+
+Here are the big things I would make sure you
+understand about Python before starting on
+this chunk's project work:
+
+● How to install Python and set up a
+virtual environment
+
+● Working with lists and dictionaries
+● The boto3 library for working with AWS
+
+services
+
+APIs
+The kind of API we are building is a REST API.
+This podcast (transcript included) is a nice
+introduction to what that means and what other
+kinds of APIs there are.
+
+The hands-on challenges at The Ultimate API
+Challenge seem like a great, free way to get
+some practice building and invoking different
+toy APIs.
+
+88
+
+
+
+AWS serverless
+I like this article for a good explanation of what
+we mean by the word “serverless” (don’t be
+fooled, there are still servers down there
+somewhere!)
+
+Get into all things AWS serverless with
+serverlessland.com.
+
+Alex DeBrie’s DynamoDB Guide and
+associated book is the gold standard for
+learning how DynamoDB works.
+
+Source control
+GitHub's Learning Lab is a good way to
+practice your git and hub skills.
+
+You may also enjoy other interactive Git
+tutorials such as Learn Git Branching and Oh
+My Git.
+
+Jakob's Story: From Clinical
+Research Technician to Cloud
+Engineer
+
+89
+
+
+
+Time to complete the Cloud Resume
+Challenge: ~100 hours, including certification
+study
+
+“The Cloud Resume Challenge helped me a
+great deal in my job search because it gave
+me something to talk about and refer back to.
+
+“By far the most useful thing was my
+understanding and implementation of
+infrastructure as code. Setting up pipelines to
+test and deploy my changes seemed like an
+unnecessary step at first, but I think that
+being able to discuss how it made quick and
+safe iterations possible made me a much
+more attractive hire.
+
+"Finishing the Cloud Resume Challenge
+showed me that a normal person like me
+could build things accessible to the whole
+world on the cloud. It changed my inner
+monologue from 'I wish someone would build
+something to address this need I have' to 'I
+could build something to address this need I
+have.'
+
+"The Cloud Resume Challenge is a great
+way to open your eyes to your own potential.
+
+90
+
+
+
+After you finish, KEEP them open and build
+the solutions you want to see in the world.
+People will notice that."
+
+Mods
+
+Developer Mod: Schemas and Dreamers
+Store your visitor counter in a relational
+database instead of DynamoDB, maybe using
+AWS's RDS Postgres or MySQL service. You'll
+have to defend this choice in a job interview
+because it will be less "serverless" than the
+rest of your setup, but it will get you into some
+challenges commonly faced by real cloud
+teams, particularly around networking. (How do
+you connect a Lambda function, which is
+stateless, to an inherently stateful database?)
+
+If you use MySQL, I would start by rewriting
+your API function to use Node.js, and then
+looking at Jeremy Daly's Serverless MySQL
+module to manage your database connections.
+
+You will also need to think about how you
+manage and apply updates to your database
+schema without breaking your running API.
+
+91
+
+
+
+DevOps Mod: Monitor Lizard
+One of the most important ops practices is
+making sure that you get notified quickly when
+your running services do something
+unexpected. There are many, many services
+that can help you monitor the behavior and
+performance of your applications. In the
+modern cloud world, Datadog is perhaps the
+most ubiquitous third-party product; I wanted to
+recommend it for this mod, but it doesn't have
+a very flexible free tier. So unless you're willing
+to spend extra money for the sake of your
+resume, we'll use AWS's built-in product,
+CloudWatch, to instrument our API.
+
+Part 1: Establishing metrics
+1. Take a minute to read about monitoring
+
+REST APIs using CloudWatch and key
+monitoring concepts for Lambda, then
+decide on 3 to 5 types of incidents you
+want to be alerted about. Some typical
+ideas include:
+
+● If your Lambda function
+invocation crashes (exits with an
+error);
+
+● If the overall latency (response
+time) of your API is longer than
+usual;
+
+92
+
+
+
+● If the total number of Lambda
+function invocations within a short
+time period is unusually large
+(this could indicate that your API
+has become hugely popular -
+yay! - or that it's undergoing a
+denial-of-service attack - ugh!)
+
+Each of these suggested incidents can
+be mapped to a CloudWatch metric.
+
+2. When you've decided on metrics you
+like, set up a CloudWatch alarm on each
+metric. If you do this by hand, remember
+to add it to your infrastructure-as-code
+definitions in Chunk 4.
+
+3. Set up an SNS topic that the alarms will
+notify.
+
+4. Do something outrageous with your API,
+like call it 500 times in 2 seconds or
+replace all the code with ASCII art, and
+make sure the SNS topic receives the
+alerts you expect.
+
+Part 2: Getting notified
+You could just subscribe your email address to
+the SNS topic, but what if a critical alert went
+straight to spam or got lost in your inbox? What
+you really want to do is send the alerts to a
+service that will notify you VERY LOUDLY AND
+SPECIFICALLY.
+
+93
+
+
+
+The most widely-trusted service for doing this
+is called PagerDuty, and it has a pretty good
+free tier. Make a free PagerDuty account,
+download the app, and then follow PagerDuty's
+setup guide to connect your SNS topic.
+Confirm you can get alerts to your phone when
+the API misbehaves.
+
+Finally, let's connect the alerts to a Slack
+workspace - this is sometimes called
+"ChatOps" and it could be a useful foundation
+for notifying a team about problems with your
+app. PagerDuty has a Slack integration, but for
+the sake of learning you could also do this
+integration directly:
+
+1. If you don't have an existing Slack
+workspace you can use, make a free
+one.
+
+2. Follow this useful tutorial showing how
+to send your alerts to a Slack webhook.
+Note that it requires creating a new
+Lambda function to trigger on the SNS
+notification. Also note the use of AWS's
+secure parameter store for the Slack
+credentials - this (or AWS Secrets
+Manager, which does basically the same
+thing but has the disadvantage of not
+
+94
+
+
+
+being free) is the proper place to
+manage third-party secrets in AWS.
+
+Again, a reminder: whatever infrastructure
+(topics, alarms, functions, parameters) you've
+created in this mod needs to be converted into
+infrastructure-as-code before you can declare
+victory - it's the DevOps way!
+
+Security Mod: Check Your Privilege
+The principle of least privilege says that your
+code should have only the permissions
+required to perform necessary actions - nothing
+more. That way, even if an attacker
+compromises part of your system, they won't
+be able to use it as a springboard to infiltrate
+untouched parts of your cloud.
+
+1. Use the IAM Access Analyzer to
+determine if you have any permissions
+in the IAM roles you've created for this
+project that are not being used by your
+code. Then, remove permissions until
+the IAM roles contain only the actions
+necessary for your API calls to work.
+
+2. The access analyzer works by
+comparing your IAM policies with logs
+generated by your running services, so
+
+95
+
+
+
+it can only give you recommendations
+after you've deployed a
+possibly-insecure policy.  Next, you'll
+want to make sure that
+overly-permissive IAM policies never
+make it into the cloud in the first place.
+Use policy validation to flag insecure
+IAM configurations before they get
+deployed. (You can run this by hand for
+now, but eventually you'll want to
+incorporate this check into your CI/CD
+workflow - see Chunk 4. You should run
+the policy validator before merging pull
+requests into your main branch.)
+
+Pause to reflect
+That moment when your API returns a valid
+response is a magical thing: you've built a real
+web service in the cloud! At this point, you've
+gone too far to stop now - but while this chunk
+of work is still fresh in your mind, write down
+answers to the questions below.
+
+● What aspect of Chunk 2's work did you
+find the most difficult?
+
+● Note one or two problems you
+overcame to get the cloud function
+talking to your database; include the
+error messages or screenshots of the
+
+96
+
+
+
+issues, and write down what you did to
+fix them.
+
+● Did you implement one of the mods?
+Note which you chose and what you
+learned. How did you improve your
+project over the basic spec?
+
+● What's something you'd have done
+differently, or added, if you'd had more
+time?
+
+97
+
+
+
+Chunk 3: Front-end / back-end
+integration
+It's now time to tie together everything you
+worked on in Chunks 1 and 2. You're going to
+connect your front end (the resume site
+deployed to the cloud bucket) to the back end
+(your API) and get the visitor counter
+displaying on your homepage. We'll also write
+some automated tests to make sure that
+behavior is really working.
+
+(Challenge Steps 7, 11)
+
+7. Javascript
+Your resume webpage should include a
+visitor counter that displays how many
+people have accessed the site. You will need
+to write a bit of Javascript to make this
+happen. Here is a helpful tutorial to get you
+started in the right direction.
+
+11. Tests
+You should also include some tests for your
+Python code. Here are some resources on
+writing good Python tests.
+
+98
+
+
+
+How to approach this chunk
+Here's how I would go about connecting your
+API to the website:
+
+1. You'll need to write a tiny bit of
+Javascript to make the HTTP request to
+the API Gateway. (Seriously, it's just a
+couple lines of code - don't overthink it.)
+
+2. Make sure you account for CORS
+issues between your browser and the
+API. This is almost certainly the most
+common and most frustrating issue
+faced by challengers. Good news:
+everybody eventually figures it out!
+
+3. Verify that you can see output from your
+Lambda function returned from the
+Javascript call and printed out
+somewhere in the web app.
+
+When you get this working, you will want to
+write an automated test or two against your
+API to confirm that the API always does what
+you expect.
+
+How to write your very own smoke test
+Writing tests for your code is never a step you
+should skip, even if your code is simple enough
+that the tests feel perfunctory. But for the
+purposes of this challenge, there's a specific
+
+99
+
+
+
+type of test you can write that should generate
+great conversation in a job interview. It's
+sometimes called an "end-to-end test" or a
+"smoke test". (Somewhere, Daniel Singletary is
+smiling!)
+
+The original challenge prompt steers you
+toward writing "unit tests'' using something like
+Python's built-in testing library. In a unit test,
+you verify that your code returns expected
+values before it is deployed.
+
+This is fine, but not very interesting, since
+mostly what your code is doing is talking to
+cloud services. Without actual services to call,
+your code will have to "mock", or pretend to
+call, those services - and that means you're not
+really testing much of anything.
+
+On the contrary, an end-to-end or smoke test is
+run after your API gets deployed. It uses the
+real, live URL of your API and makes sure that
+it provides the expected responses to a test
+call. This indirectly verifies that
+
+1. your Lambda code is working as
+expected,
+
+2. permissions and other config are correct
+between your gateway, your function,
+and your database, and
+
+100
+
+
+
+3. all your resources have been deployed
+successfully.
+
+An excellent tool for running smoke tests is
+called Cypress; it's a Javascript testing
+framework that (among other things) lets you
+call your API endpoint just like the Javascript
+code in your front-end app is doing. The
+Cypress test doesn't have to know anything
+about how your Lambda function is written, or
+what language it's written in, or even that it's a
+Lambda function. It just needs to know what
+output your URL should yield in response to
+input.
+
+Some ideas for things to check in your smoke
+test:
+
+● Make sure your API not only returns an
+updated value to you, but actually
+updates the database
+
+● Make sure your API responds to
+unexpected input correctly; what if the
+inbound request is not formatted the
+right way?
+
+● Make sure you are checking edge cases
+in your function logic. What happens if
+the visitor count is not initialized (ie, on
+the first time the function is invoked?)
+
+101
+
+
+
+Helpful resources
+
+Javascript
+Another week, another new programming
+language, another banquet of learning
+resources. You could spend your entire life
+reading about Javascript on the internet. I
+would focus on the parts that matter for this
+project:
+
+● Run through a basic language overview
+and syntax tutorial, like this one;
+
+● Learn how to make API calls with
+Javascript;
+
+● Learn about how to organize the files in
+your website and reference scripts in
+HTML
+
+CORS
+CORS (cross-origin resource sharing) is the
+security feature that will make your web
+browser scream at you when you try to call
+your API because it's hosted at a different
+domain than your resume site, and it'll be the
+bane of your existence until you tweak your
+API headers to fix it. Here's a good CORS
+explainer and tutorial; expect to open a few
+tabs and try a few things before you solve this
+one, as it's frustrating even for experienced
+engineers.
+
+102
+
+
+
+Mods
+
+Developer Mod: Playing the Hits
+Technically, the visitor counter we've built is a
+hit counter; it'll update every time you refresh
+your page, even though you're just one unique
+visitor. See if you can create a new API method
+to only count unique visitors. (Hint: check the
+API Gateway request metadata for the IP
+address associated with the browser making
+the API call.) Add the unique visitor counter to
+your homepage and update your tests
+accordingly.
+
+● You'll have to decide the timeframe in
+which a visitor is counted as a repeat
+visitor - daily, weekly, monthly, etc -
+before you count them as "unique"
+again. This will involve some fun date
+math!
+
+● Note: IP addresses may be considered
+PII (personally-identifying information) in
+some jurisdictions, so if you're nervous
+about logging them to a database, you
+could consider storing a one-way hash
+of the address instead. Here's how to do
+that in Python.
+
+● If you want more Javascript practice, try
+writing this function in Node.js instead of
+Python.
+
+103
+
+
+
+DevOps Mod: Browser Up
+It turns out that Cypress does a lot more than
+just API testing; it's really designed to automate
+full "end-to-end" tests against your browser,
+like clicking buttons and verifying the contents
+of HTML elements after API calls. See if you
+can write a test that loads your resume site a
+couple of times and confirms the updated
+visitor count values in your DOM. (Actually, you
+can test anything on the site you want,
+including the behavior of buttons and the
+content of text. Go wild!)
+
+Security Mod: Wall of Fire
+The API we've created has no authentication;
+it's a public API, connected to our public
+website, which means anyone on the internet
+can find it and make requests to it directly.
+
+In one sense this isn't a big deal, since all our
+API does is update a counter. But we are still
+vulnerable to people who try to
+
+● send malicious API requests in hopes of
+getting the API to do other things, like
+execute the attacker's code;
+
+● execute a denial-of-service attack (or, as
+it's sometimes called in the cloud, a
+
+104
+
+
+
+denial-of-wallet attack) by spamming the
+API and filling up your credit card with
+billions of bogus requests
+
+One way to mitigate these risks is to put a web
+application firewall (WAF) such as AWS WAF
+in front of our API. Be aware that AWS WAF
+doesn't have much of a free tier; the managed
+rules will quickly start to cost you about $5.00
+per month apiece. If you do decide to set up
+AWS WAF for learning purposes, I suggest
+using the preconfigured rules, and then use the
+bot control features (there's some free tier
+here) to deny bots from accessing the API.
+Whether or not you actually deploy AWS WAF,
+take some time to read and understand the
+links above.
+
+Even if you don't want to pay for AWS WAF,
+you still need to put some safeguards on your
+API. The quick and dirty way to do this is to
+implement account-level throttling and rate
+limiting on your API. Decide how many
+requests you are comfortable allowing your API
+to process in a given time period, then set the
+thresholds so that you will not exceed them.
+
+Pause to reflect
+Take a deep breath - you've done it! While
+
+105
+
+
+
+some of the most important learning in this
+project is yet to come, you've now built an
+entire full-stack web application, front to back -
+and that deserves a celebration. But before
+you pop the confetti, write down answers to the
+questions below while they're still fresh in your
+mind.
+
+● What aspect of Chunk 3's work did you
+find the most difficult?
+
+● Note one or two problems you
+overcame to get the API talking to your
+browser; include the error messages or
+screenshots of the issues, and write
+down what you did to fix them.
+
+● The mods in this section are fairly
+open-ended; if you chose one, how far
+did you go and why is it an improvement
+over the basic spec?
+
+● What's something you'd have done
+differently, or added, if you'd had more
+time?
+
+Nana's Story: From Tech Support to
+Cloud Native Engineer
+
+106
+
+
+
+Nana, based in New York City, already had
+some technical experience as a help desk
+administrator, but needed something more
+relevant on his resume to achieve his dream
+of getting a full-time cloud engineering job.
+
+Nana says it took him about 4 weeks, coding
+about 5 hours each day to complete the
+challenge. "It was the kind of project that
+established full-stack as well as DevOps
+knowledge."
+
+About his interviewing experience, Nana
+noted: "The resume challenge helped me
+demonstrate important skills, particularly
+understanding of CICD automation, DNS
+(and how the internet works), SCM/git, and
+serverless architecture. Hiring managers
+seemed to appreciate rounded developers
+who also had some experience with agile
+and the DevOps culture."
+
+Nana used his first round of interviews,
+mostly with Fortune 500 companies, to
+identify remaining gaps in his knowledge,
+then took a 4-month break from interviewing
+to pursue more hands-on learning (including
+the ETL challenge provided later in this
+
+107
+
+
+
+book!). About six months after initially starting
+the Cloud Resume Challenge, he landed a
+job as a cloud native engineer at Accenture.
+
+For future challengers, Nana offers this
+wisdom: "Get hands-on, and don't rush it!"
+
+108
+
+
+
+Chunk 4: Automation / CI
+Your website will still look the same at the end
+of this section - but the underlying deployment
+process will look much different. You're going
+to represent your cloud resources as
+configuration, so they can be deployed
+identically in any environment - and you're
+going to automate those deployments using a
+CI (continuous integration) pipeline.
+
+(Challenge Steps 12, 14, 15)
+
+12. Infrastructure as Code
+You should not be configuring your API
+resources – the DynamoDB table, the API
+Gateway, the Lambda function – manually,
+by clicking around in the AWS console.
+Instead, define them in an AWS Serverless
+Application Model (SAM) template and
+deploy them using the AWS SAM CLI. This is
+called “infrastructure as code” or IaC. It
+saves you time in the long run.
+
+14. CI/CD (Back end)
+Set up GitHub Actions such that when you
+push an update to your Serverless
+Application Model template or Python code,
+your Python tests get run. If the tests pass,
+
+109
+
+
+
+the SAM application should get packaged
+and deployed to AWS.
+
+15. CI/CD (Front end)
+Create a second GitHub repository for your
+website code. Create GitHub Actions such
+that when you push new website code, the
+S3 bucket automatically gets updated. (You
+may need to invalidate your CloudFront
+cache in the code as well.) Important note:
+DO NOT commit AWS credentials to source
+control! Bad hats will find them and use them
+against you!
+
+How to approach this chunk
+I encouraged you to use the AWS web
+interface in the previous sections because I
+think it's the best way to explore cloud services
+that are brand new to you. But as the challenge
+prompt states, this isn't the way professional
+cloud engineers deploy services. For that, you
+need infrastructure-as-code (IaC).
+
+If I got my API working using the
+web console, do I really need to
+go back and write automation?
+
+110
+
+
+
+YES. Representing cloud resources as code
+using config tools like CloudFormation or
+Terraform is probably the most characteristic
+task in a cloud engineer's day-to-day job.
+
+There are parts of this challenge you can
+hand-wave a little bit (nobody really cares if
+you kinda stole your static site template from
+somewhere else, for example).
+
+But you cannot skip over the infrastructure
+automation piece. It is the most relevant job
+skill you will practice in this entire challenge.
+
+The original AWS version of the challenge
+recommends using AWS SAM as your IaC tool.
+I chose this because SAM (which stands for
+"Serverless Application Model") is specifically
+designed to make deploying serverless
+resources easier. However, SAM isn't all that
+widely used in the industry outside of certain
+AWS-heavy shops, so if you want to get
+maximum value from this part of the project I
+would recommend substituting one of the
+following IaC tools:
+
+111
+
+
+
+AWS-specific infrastructure-as-code tools
+
+CloudFormation
+SAM is actually just a slightly more abstracted
+version of CloudFormation, AWS's OG IaC
+service, which is a little gnarlier to work with
+but will let you automate most AWS
+resources–if you're willing to write a whole lot
+of YAML. These days, I get the sense that most
+people prefer to let a higher-level tool generate
+their CloudFormation templates for them. A
+tool such as …
+
+The CDK
+Technically the CDK ("Cloud Development Kit")
+also produces CloudFormation templates as
+output, but the process of getting there is quite
+different: you define your infrastructure
+resources in your favorite language such as
+Javascript or Python, and the CDK translates
+your "constructs" into YAML for you. An
+up-and-coming approach beloved by many
+developer-first shops.
+
+Other infrastructure-as-code tools
+
+Terraform
+Using Terraform as the IaC tool is by far the
+most common mod people make to the
+
+112
+
+
+
+original Cloud Resume Challenge spec, and
+with good reason; it's the rare example of a
+multi-cloud tool that everybody uses. Whether
+your DevOps team works with AWS, Azure, or
+Google Cloud, Terraform (and the other
+HashiCorp tools like Vault, Nomad, and
+Consul) are likely to put in an appearance.
+Terraform uses its own domain-specific
+configuration language called HCL, though
+they're adding programming language support
+as well.
+
+Pulumi
+Sort of the cloud-agnostic version of the CDK:
+define your AWS resources in your favorite
+language and deploy them, no YAML required.
+I was an early reviewer of Pulumi several years
+ago and was initially unimpressed, but I'm
+happy to eat crow now; the project's clearly
+found a niche and seems to have some good
+ideas. Note that Pulumi probably has the
+smallest userbase of the tools listed in this
+section, but they do have a super friendly and
+engaged community, and my impression is that
+they're pretty well-known in the DevOps world
+at this point.
+
+113
+
+
+
+Before you choose one of these tools, take a
+few minutes to read up on them and compare.
+You will want to understand the following:
+
+● How do these tools manage state? (If
+you make a manual change to your
+infrastructure after deploying, can the
+tool figure it out?)
+
+● How do they interact with the underlying
+cloud APIs?
+
+● What happens if you close your laptop
+in the middle of a deployment?
+
+● The third-party tools tend to have their
+own hosted versions such as Terraform
+Cloud; what value might these provide
+over just deploying to AWS directly?
+
+Setting up your deployment pipeline
+We are using GitHub Actions to automate our
+deployments in this challenge because they
+are free (for our purposes) and tightly
+integrated with our existing GitHub
+repositories. I would suggest you create a
+deployment workflow that looks something like
+this:
+
+● Build step. Package up your
+function code, making sure to
+install any needed dependencies.
+Your output at this stage should
+
+114
+
+
+
+be a zipped-up Lambda function
+artifact and a config file ready to
+deploy your resources.
+
+● Deploy step. Run your IaC tool
+to deploy the resources in AWS.
+
+● Smoke test step. Run your
+Cypress API tests to make sure
+the deployed API does what you
+think it should. (Here's a handy
+pre-made GitHub action for
+running Cypress tests, so you
+don't have to install Cypress
+itself.)
+
+Helpful resources
+IaC
+DigitalOcean has a useful illustrated article to
+help you visualize basic IaC concepts like state
+management.
+
+CI/CD (Continuous Integration / Continuous
+Deployment)
+Read up on trunk-based development, the
+modern way of managing code changes in a
+repository. Unless you have other collaborators
+on this project, your workflow will probably look
+more or less like trunk-based development by
+default.
+
+115
+
+
+
+GitHub Actions has a nice learning section
+that's worth reading before you get hands-on.
+Mainly you'll want to be sure you're handling
+secrets appropriately. The old way was to save
+long-lived AWS credentials as GitHub Secrets.
+As you've hopefully picked up by now, it's
+security best practice to avoid long-lived
+credentials as much as possible. Instead, use
+GitHub's OIDC provider to fetch temporary
+credentials for your actions.
+
+You might want to be aware of several other
+CI/CD tools that are commonly used in the
+industry:
+
+● GitLab
+● Jenkins
+● CircleCI
+● AWS CodeBuild / CodePipeline (mostly
+
+in AWS-heavy shops)
+● Azure DevOps (formerly known as
+
+Microsoft Team Foundation Server)
+
+Mods
+
+Developer Mod / Security Mod: Chain
+Reaction
+(I've open-sourced this mod; you can
+contribute to it in the official Cloud Resume
+Challenge project repository.)
+
+116
+
+
+
+The software supply chain is everything
+involved in getting code from your laptop to
+production: the code and configuration you
+write as well as any underlying packages and
+libraries they rely on (also known as
+"dependencies"). Securing the software supply
+chain, particularly these dependencies, from
+compromise is an emerging discipline in
+modern software development and infosec.
+The stakes couldn't be higher - just check out
+this list of recent high-profile supply chain
+attacks.
+
+In this challenge, you'll extend your Cloud
+Resume Challenge project to add protections
+to your code and dependencies.
+
+Initial reading
+
+● Check out Microsoft's software supply
+chain best practices. These
+recommendations are based around
+NuGet, the package manager for
+Microsoft's .NET ecosystem, but much
+of the advice generalizes well.
+
+● Take a whirl through the Cloud Native
+Computing Foundation's software
+supply chain repo, particularly the
+compromise definitions and the
+whitepaper.
+
+117
+
+
+
+● Here's a helpful video walking through
+supply chain attacks in the Kubernetes
+ecosystem.
+
+● Get familiar with GitHub's security
+features; a decent percentage of
+real-world software supply chain
+protection is just "turning the right knobs
+in GitHub", it seems.
+
+Challenge steps
+
+1. Sign your Git commits to both the front
+end and back end resume repositories.
+You'll need to set up a GPG key to do
+this. You'll know it's working when you
+see the "Verified" badge next to the
+commit in the GitHub console.
+
+2. Use status checks to ensure that only
+signed commits can be merged into
+your repository.
+
+3. Set up automated code scanning
+using GitHub's CodeQL code analysis
+tool on GitHub Actions. Note that you
+will need to make your repositories
+public for this to work. You should
+automatically run the code scan any
+time a pull request is merged to your
+main branch and fail the merge if
+security issues at level "High" or higher
+
+118
+
+
+
+are detected. You should also guard
+against dependency decay by running
+the scan on a schedule once per month.
+You will have to edit a config file to
+adjust the schedule.
+
+4. Generate an SBOM (Software Bill of
+Materials). An SBOM is a manifest that
+lists all the packages shipped in your
+container image or other code
+environment. As part of the build step in
+your back-end repository's CI/CD
+pipeline, generate an SBOM attestation
+file for your deployment artifact using
+the open source tool Syft. (If you are
+shipping your code and dependencies
+as a zip file on AWS Lambda, not using
+a container image, you should still be
+able to point Syft at the unzipped
+deployment artifact to get an
+attestation.)
+
+5. Automate at least one additional
+vulnerability check in your CI/CD
+workflow. Using the package list in your
+SBOM, write some automation to run at
+least one other dependency check
+besides the GitHub automated
+scanning. Vulnerability databases are
+not always equally reliable, and it's a
+good idea to check a couple of sources
+
+119
+
+
+
+to provide defense-in-depth. Grype is a
+scanner that works well with Syft (and
+has its own GitHub Action). You could
+also consult an API such as OSV. Fail
+the build with an appropriate error
+message if you encounter a
+compromised dependency.
+
+6. AWS Lambda, which does not use a
+container-based deployment artifact by
+default, has its own code signing
+feature. Add code signing into your
+infrastructure-as-code definition for your
+API.
+
+7. Draw a diagram showing how code
+flows through your system and where
+attacks can be detected / mitigated.
+Reflect on where you may still have
+risks, and what other steps you might
+take if this were a more sensitive
+project, or involved multiple
+collaborators.
+
+DevOps Mod: All The World's A Stage
+Thus far, everything we've built is living in one
+environment: our "production" environment
+that's serving live traffic. This is not ideal
+because any bug we deploy through our fancy
+automated pipeline will immediately break our
+site. Real-world applications usually have one
+
+120
+
+
+
+or more additional "stages", pre-production
+environments where the developers deploy
+code in hopes of catching and fixing bugs
+before they are released to users. Perform the
+following steps to transform your CI/CD
+pipeline into a multi-stage workflow.
+
+Important note 1: Some AWS services, like API
+Gateway and Lambda, support the concept of
+multiple stages within the same deployed
+resource. I recommend that you do not mess
+with these features. The cleanest, safest, and
+most straightforward way to implement multiple
+staging environments in AWS is literally to
+have a separate AWS account for each version
+of your environment. If you have used the AWS
+Organizations model of account structuring I
+recommended back in the "Setup and Safety"
+section, this should be pretty straightforward to
+set up.
+
+1. Set up an AWS account within your
+organization strictly for testing.
+
+2. Add steps to your GitHub Actions that
+deploy code changes to the test
+environment on any pull request to the
+main branch, and only allow a merge
+to main and a production deployment
+if all your tests and security checks
+
+121
+
+
+
+pass. (This is the ultimate stress test of
+your infrastructure-as-code setup - you
+should be able to deploy your whole
+application into a fresh environment with
+no manual steps necessary! If you can't,
+keep tweaking your IaC until you can!)
+You should continue to run your
+end-to-end tests in your production
+environment deployment, but linting on
+your code and dependencies can be
+limited to your test environment, as it
+would be redundant to run twice.
+
+3. But wait! You may have multiple
+different collaborators checking out your
+code and creating pull requests to main
+at the same time. Make sure that each
+pull request has a fresh copy of your
+test infrastructure associated with it.
+There are two ways you could go about
+this:
+
+a. Theoretically, you could automate
+the creation of a whole new AWS
+account for each pull request. I
+think this is a bit overkill.
+
+b. You can deploy a fresh copy of
+your site in the shared test
+environment for each pull
+request. If you do this, you'll have
+to make sure that any resources
+
+122
+
+
+
+you create have unique names -
+don't hardcode them in your IaC
+templates. Wherever possible, let
+AWS generate its own resource
+names for you to minimize
+collisions. Where you have to
+create names, inject your commit
+ID or something to ensure you
+get a unique one.
+
+Important note 2: The one thing that will be
+different about your production environment
+compared to your test environment is that your
+test websites will not be using your custom
+domain name. This is another thing you'll have
+to account for in your automation - make sure
+your Cypress tests in the test environment can
+find the right CloudFront URL to reach.
+
+4. In the real world, code changes often
+require human approval before being
+released to production. Experiment
+with adding a manual approval step
+to your workflow after all tests have
+passed.
+
+5. Think about the performance of your
+pipeline. Do you have any steps running
+sequentially that could be parallelized?
+Are you installing any tools during the
+
+123
+
+
+
+build process that should be packaged
+as part of the underlying action
+container?
+
+6. Cleanup time! Lots of old test
+environments sitting around will
+eventually start costing you money, even
+in the serverless world. Plus, it's a good
+idea to regularly build your test
+environment from scratch, just to ensure
+that manual drift hasn't crept in. Add an
+additional step to your GitHub
+Actions workflow that tears down
+your test resources after a
+successful merge to main. (You
+should be able to run this in parallel with
+your production deployment.)
+
+Stephanie's Story: From Bank
+Manager to Cloud Engineer
+
+"I took on the Cloud Resume Challenge
+because I wanted to gain real life experience
+in a brand new field. The challenge tested
+me on whether a career change was really
+what I wanted, as well as how quickly I could
+learn something new.
+
+124
+
+
+
+"The challenge took me about 150 hours to
+complete over about 6 weeks (though I really
+started hitting it hard in the last 3 weeks or
+so). It took me longer in part because I
+chose to make the challenge my own by
+doing my automation in Terraform instead
+of SAM.
+
+"As it turned out, this was one of my best
+decisions! I was able to speak to real life
+scenarios based on what I had faced during
+the process. One that stands out the most
+was a troubleshooting exercise I was given
+during an interview. I was able to answer
+quickly and confidently because it was
+something I had run into during my own
+resume challenge.
+
+"After a 3-month job search, I am now an
+Associate Cloud Engineer for iRobot, and I
+freaking love it! I learn something new every
+day. Love my team, love the work and enjoy
+challenging myself every day."
+
+Pause to reflect
+And with that, you've completed the technical
+steps of the Cloud Resume Challenge. This is
+
+125
+
+
+
+no small feat. Particularly if you are new to
+cloud, and emphatically if you are new to tech,
+you have beaten the odds and joined a very
+select group of people who have pulled off this
+difficult project. Sincerely, from the bottom of
+my heart, wow. All that's left is to write the blog
+post (and get certified if you haven't yet), so
+make sure to take a few notes before you head
+to the next section:
+
+● What aspect of Chunk 4's work did you
+find the most difficult?
+
+● Which IaC tool did you choose? Why?
+(List a couple of specific
+considerations.)
+
+● Note one or two problems you
+overcame to get your cloud resources
+automatically deployed; include the error
+messages or screenshots of the issues,
+and write down what you did to fix them.
+
+● Both the mods for this section are long
+and gnarly. Each would be worth a blog
+on their own. Make sure to capture what
+steps you took and anything unusual
+you ran into.
+
+● What's something you'd have done
+differently, or added, if you'd had more
+time?
+
+126
+
+
+
+127
+
+
+
+Chunk 5: The blog … and beyond
+It's all about the blog now! (And maybe some
+catchup on previous sections, if you're behind.)
+
+(Challenge Step 16)
+
+Finally, in the text of your resume, you should
+link a short blog post describing some things
+you learned while working on this project.
+Dev.to or Hashnode is a great place to
+publish if you don’t have your own blog.
+
+How to approach this chunk
+After weeks of work, multiple late nights, you've
+finally finished the entire Cloud Resume
+Challenge. It works from front to back. You've
+even passed a certification or two. You'd be
+perfectly happy never to think about any of this
+again. The last thing you want to do is sit down
+in front of the computer again and … write
+about it.
+
+I know the feeling, believe me. (I've felt it plenty
+when writing this book!) Cloud Resume
+Champions often complain, only half
+tongue-in-cheek, that doing the blog writeup is
+the hardest part of the challenge. I am
+
+128
+
+
+
+imploring you, though, not to skip this step. It's
+kind of the punchline of the whole challenge.
+It's a signal to the world that you are
+participating in the cloud community, that you
+are giving back to future challengers, and that
+you are serious about leveling up your cloud
+career.
+
+Recruiters may read it. Hiring managers may
+read it. Basically, the upside is unlimited and
+the downside is nil.
+
+So just suck it up and write the dang blog, then
+share it on LinkedIn and Twitter. Worst case,
+you end up with good notes on what you built
+so that you can review them when prepping for
+interviews.
+
+Realistically, you'll get some love from your
+network, and a few followers who are
+interested in what you build next - which is a
+great kickstart for a blogging habit that will
+grow your career over time.
+
+Best case … well, best case, your blog goes
+viral like Daniel Singletary's. I'm not promising
+this will happen to you. But, having reviewed
+hundreds of challenger blogs, I can provide a
+few tips to help you stand out from the crowd.
+
+129
+
+
+
+Include a diagram
+This is the #1 pro tip for a great blog, right
+here. People love pictures. Make a little
+architecture diagram of what you built in
+Lucidchart or draw.io. Share it as a standalone
+image on social media along with the link to the
+article. It will get engagement, guaranteed.
+(Here's an example of a challenge blog that
+makes great use of images.)
+
+Make it about you, not about the challenge
+The Cloud Resume Challenge itself has been
+explained and analyzed to death by the last six
+hundred bloggers. Your troubleshooting
+experiences are probably not unique. What is
+unique is you. Why are you undertaking the
+challenge? What unusual skills do you bring to
+the table?
+
+Go back and review Daniel's Plumbers Guide
+to Cloud again. Notice how he reflects on his
+plumbing skills and how they helped him learn
+to code. What life experiences do you have
+that helped you crack the challenge? Another
+challenge champion blog that I really like talks
+about the author's experience with mainframes,
+
+130
+
+
+
+and how it felt to transition to serverless
+applications. That's an interesting story!
+
+Other marvelously unique champion blogs I've
+seen recently include this dentist who
+compared CORS errors to pulling teeth, or an
+audio engineer reflecting on how his
+experience mixing live events translated to
+cloud. Take a minute to read these stories and
+think about yours.
+
+Framing your blog as a journey of personal
+discovery and growth, rather than a technical
+tutorial, will help you get more traction when
+you share it.
+
+Consider focusing on your mods
+While many people have completed the Cloud
+Resume Challenge, not too many have gone
+above and beyond and completed the mods
+suggested in this book. If you followed, say, the
+security track, consider framing your blog post
+around that - "How I improved the security of
+the Cloud Resume Challenge" is an interesting
+post in and of itself.
+
+Likewise, you could scope your blog to a part
+of the challenge where you spent extra time. If
+you did a bunch of work building an "account
+
+131
+
+
+
+vending machine" to create new AWS accounts
+for your CI/CD process, that's your blog right
+there. It's often better to be small-scoped and
+detailed rather than all over the place.
+
+Don't ramble on
+There's a famous line, "If I'd had more time, I'd
+have written less." Short and to the point wins
+in our hyperinflated attention economy. If your
+blog is more than a thousand words, you're
+probably rambling on. Save your in-depth
+observations on every error message you
+Googled over the past six weeks for your
+personal notes. Just focus on the takeaways
+that can benefit everyone.
+
+Tag me
+Seriously! I read and comment on just about
+every single Cloud Resume Challenge blog
+that I get tagged in on LinkedIn or Twitter (I'm
+@forrestbrazeal in both places). I'm always
+happy to help boost your reach.
+
+132
+
+
+
+Ian's Story: Writing a Blog That Gets
+Exposure
+
+Ian Cahall's May 2022 post caught my
+attention as a strong example of a Cloud
+Resume Challenge blog. I reached out to him
+a few weeks later to hear about his strategy -
+and his results.
+
+Forrest: I noticed you chose to write your
+blog post as a LinkedIn post rather than
+on a separate site like Dev.to or Medium -
+why did you decide to do this, and do you
+think it made a difference?
+
+Ian: I actually think using LinkedIn's Article
+Publishing tool serves a number of purposes
+when writing a blog like this. First, the editor
+is easy and simple to use, so there's a low
+barrier to entry in making a good looking
+post. Second, and importantly, discoverability
+is significantly boosted as it integrates your
+profile and personal branding throughout the
+post. Finally, the out-of-the-box analytics that
+LinkedIn provides offer some benefits other
+sites won't - like viewer demographics (job
+title, company), impressions, etc. My CRC
+
+133
+
+
+
+post got WAY more engagement than most
+of my other posts both in viewership and
+interactions (likes, comments,
+click-throughs).
+
+Do you consider yourself an experienced
+blogger, or was the process of creating
+the writeup new for you?
+
+I'm not incredibly experienced in blogging
+specifically, but I've got some experience
+with Social Media presence and branding
+both professionally and personally. Writing a
+post that was specifically tailored to a
+technical project like this was new, though.
+
+What happened after you published the
+post?
+
+In the ~4 weeks since I published the post,
+two major shifts have occurred from a career
+perspective:
+
+● I've been contacted an average of 5-6
+times per week by recruiters for open
+opportunities. Not all have been
+cloud-related, but the increase in
+contacts has been drastic for both
+cloud and non-cloud IT role
+
+134
+
+
+
+opportunities. I'm preparing for my first
+cloud security interview as I write this.
+
+● I've made connections with incredibly
+supportive members of the cloud
+community who see completion of the
+challenge as instant credibility and are
+willing to refer me or make
+introductions in places it makes sense.
+
+Helpful resources
+
+Blogging platforms
+If your resume site itself has blogging capability
+- perhaps because you used a static site
+generator with a blogging theme - then the best
+possible thing to do is host your blog there,
+under your own domain name. "Owning your
+own words" helps drive traffic to your site over
+time, and could be the start of an ongoing
+blogging habit that will pay all sorts of career
+dividends.
+
+If you don't want to host your own blog, don't
+worry - there can also be exposure advantages
+to publishing on a third-party blogging platform.
+At the moment I think Hashnode is my top
+recommendation, followed by Dev.to. Medium
+has declined in quality in my opinion, but you
+
+135
+
+
+
+may find their network effects somewhat
+helpful.
+
+As indicated in Ian's story above, a lot of
+people get the best traction by cross-posting
+their story directly to LinkedIn as an article.
+
+Writing help
+I've heard good things about Philip Kiely's
+Writing for Software Developers (a paid
+resource). You can also feel free to share a
+draft of your blog in the CRC Discord server for
+feedback at any time.
+
+Pause to reflect
+You're done. You did it. The Cloud Resume
+Challenge is behind you, and I couldn't be
+prouder of your achievement.
+
+Make sure to share your blog on social media,
+and then take a well-deserved rest.
+
+The only question left is the biggest one of all -
+what's next?
+
+136
+
+
+
+Part 3: From challenge to
+career
+
+137
+
+
+
+You did it. You really did it. Congratulations.
+You completed the entire Cloud Resume
+Challenge. You wrote the blog. Maybe you
+even did a couple of the extra mods in this
+book.
+
+And maybe you did all that work just for fun.
+(I've met a few who have! No judgment, but
+you're cut from different cloth than most of us,
+that's for sure.)
+
+No, it's much more likely that you completed
+the challenge with bigger things in mind. A
+promotion. A better job. Maybe even your first
+job in cloud. And that achievement is
+absolutely within your grasp.
+
+While the challenges in this book can be a
+great advantage that set you apart from other
+job candidates, you have to know how to use
+them, and how to fill in the other gaps hiring
+managers may be interested in.
+
+In the final section of this book, I'll share
+several essay-style pieces to help you connect
+the dots between the Cloud Resume Challenge
+and a cloud career.
+
+138
+
+
+
+What is a "cloud job", anyway?
+
+You probably bought this book because you
+want to get a "cloud job". Perhaps you currently
+have some sort of IT job that doesn't seem
+especially cloudy to you; or perhaps you are
+working in a field that is only literally
+cloud-related, like weather reporting or aircraft
+maintenance, and now you would like to start
+using the cloud as a metaphor.
+
+Odds are, whatever your background, you're
+interested in a cloud job because you have
+heard that people who work in the cloud make
+excellent salaries and likely will continue doing
+so for a long time to come. And this is pretty
+much true. You may have seen the industry
+studies that show people with cloud
+certifications earning six-figure salaries after
+just a couple years of experience. You have
+certainly noticed that seemingly every single
+aspect of your life has migrated to the cloud,
+from your family photos to your pizza orders,
+and somebody is going to have to do the job of
+maintaining our digital lives for the next few
+decades.
+
+139
+
+
+
+The history of the cloud job
+So what is a cloud job, anyway? To answer
+that, we need to dig into a little bit of history.
+
+The first IT jobs
+In the beginning, there were sysadmins.
+System administrators guarded access to the
+UNIX-based corporate computer systems of
+the 1970s and 80s. They installed programs,
+made backups, tuned databases and networks,
+and figured out how to solve strange errors
+with manuals in hand, long before
+StackOverflow. Their jobs were lonely, and
+their knowledge was often tribal or documented
+only in their own heads. Their natural
+adversaries were developers: the people who
+wrote the software programs that sysadmins
+had to figure out how to keep running.
+
+The "golden age" of IT: everybody has their
+own servers!
+Over time, as companies moved from
+mainframes to client-server setups where
+every employee had their own PC, IT also
+became more specialized, with the central role
+of operating computer systems splitting into
+many functions:
+
+140
+
+
+
+● Database administrators (DBAs), who
+installed, backed up, and tuned the
+performance of centralized database
+systems like Oracle and SQL Server;
+
+● Network admins, who configured
+hardware devices called routers,
+switches, and firewalls to ensure that
+information traveled quickly and safely
+both within the company's internal
+network and across the public internet;
+
+● Storage admins, who managed the
+arrays of storage disks that physically
+contained the data used by applications;
+
+● Linux or Windows system admins,
+who installed and maintained the
+operating systems (OSes) used by
+application and database servers, as
+well as the applications running on top
+of the OS;
+
+● Security admins, who specialized in
+keeping systems free of malware and
+unauthorized people from accessing
+sensitive data;
+
+● Corporate IT admins, who made sure
+everybody in the company had the
+hardware, software, and access
+necessary to do their job;
+
+● And, of course, the customer-facing
+support teams, including the
+
+141
+
+
+
+much-abused help desk that handled
+basic user requests like password
+resets and computer restarts.
+
+A former coworker of mine once referred to this
+era, wistfully, as the "golden age of IT." And
+maybe it felt that way. Every company had their
+own full-stack IT staff! You could find a job
+managing servers for a local pet food
+manufacturer just as easily as at a Silicon
+Valley software company. But there were plenty
+of problems under the surface.
+
+Unlike the old-school sysadmins, who mostly
+typed commands into text-based terminals,
+these new "ops people" often used
+point-and-click GUI-based management tools,
+many created by Microsoft. But software
+developers and quality assurance testers, the
+people who wrote and validated the programs
+running on top of all this infrastructure,
+continued to exist in their own separate worlds,
+often just handing off code for deployment with
+little context on how it worked or why.
+
+That meant that releasing new software
+features was frequently a manual process,
+taking weeks or even months to roll out code
+changes to users. (You can read a gruesomely
+
+142
+
+
+
+realistic account of one of these releases in
+Gene Kim, George Spafford, and Kevin Behr's
+essential novel The Phoenix Project.)
+
+During the late 1990s and early 2000s, the first
+successful internet companies like Google and
+eBay began to explore more efficient, reliable
+ways of delivering their biggest competitive
+advantage - their websites - to enormous
+numbers of users all over the world. Manual
+tweaks to small numbers of servers just
+wouldn't cut it anymore. They realized that the
+creation of infrastructure - servers, networks,
+databases, and so on - needed to be
+automated just like user applications.  Huge
+datacenters sprung up to handle this user load,
+and with them, new ways of "virtualizing"
+infrastructure resources so that they could be
+brought online using code and configuration
+files.
+
+Increasingly, it became clear that the next
+generation of IT professionals - those DBAs,
+network admins, and security folk, plus plenty
+of old-school sysadmins - would have to learn
+to code. They would have to retire their rickety
+scripts and work much more closely with
+developers to adopt standardized automation
+tools for building and releasing software.
+
+143
+
+
+
+Otherwise, the massive scale of these hosted
+data centers - which some people were
+beginning to call "the cloud" - would flatten
+them.
+
+The emergence of the cloud job
+This new alliance between developers and
+operators became known as DevOps, and it
+remains an uneasy and much-misunderstood
+arrangement. But what it has definitely
+accomplished is a massive shift, really a split,
+in opportunities for people with an IT
+operations skillset.
+
+There are still plenty of traditional IT jobs out
+there: managing databases, servers, networks,
+or security for companies whose infrastructure
+may be hosted in their own data center.
+Change is slow, and these jobs are not going
+away anytime soon, but they tend to be less
+well-paid and easily disrupted; increasingly,
+they are doing manual work that is handled
+better by cloud services.
+
+(On the flip side, the cloud companies
+themselves have plenty of jobs for ops
+specialists now! We've just moved from every
+company needing a full-stack IT staff, to mostly
+
+144
+
+
+
+software infrastructure companies needing
+those specialists.)
+
+And then you have the "cloud jobs" - designing
+and configuring infrastructure for companies
+whose applications run in the public clouds like
+AWS, Microsoft Azure, or Google Cloud. These
+jobs typically require more programming skill -
+you won't survive by pointing-and-clicking - and
+a broader understanding of how systems are
+architected for the cloud. That's why they're
+more valuable in the marketplace. Some
+example roles in this new world include:
+
+● Cloud engineers, DevOps engineers,
+site reliability engineers,
+infrastructure engineers, or platform
+engineers - titles often used
+interchangeably, but with very different
+responsibilities depending on the
+company. At some companies, these
+jobs are really software engineering
+jobs, embedded on software
+development teams, with a specialty in
+automating and maintaining the cloud
+infrastructure that applications run on. At
+other companies, you may find yourself
+on a "platform team" that mostly creates
+cloud guidance, guardrails, and tooling
+
+145
+
+
+
+for development teams to consume. And
+at some places, who've paid lip service
+to the concepts of "cloud" and "DevOps"
+but never really embraced the intent
+behind the buzzwords, you may find that
+you're pretty much still on a traditional
+ops team.
+
+● Cloud architects or cloud solutions
+architects, who take higher-level
+responsibility for designing and
+implementing distributed systems that
+perform well at cloud scale;
+
+● Release engineers, a subset of
+DevOps engineers at software
+companies who are hyper-focused on
+streamlining the pipelines that ship code
+to users;
+
+● Cloud network administrators, who
+design the software configurations for
+network resources in the cloud;
+
+● Cloud data engineers (a
+fast-burgeoning specialty!), who design
+the data pipelines and compute arrays
+used in data science and machine
+learning workflows;
+
+● Cloud security engineers, who stay on
+top of the unique security challenges of
+applications running on cloud-hosted
+infrastructure;
+
+146
+
+
+
+● And, of course, the customer-facing
+cloud support teams, including the
+much-abused help desk that handles
+basic user requests like password
+resets and computer restarts. (That's
+never going away - sorry!)
+
+So, after all of that: what is a "cloud job"?
+
+My opinion is that being a cloud engineer - my
+catch-all term that encompasses most of the
+roles listed above - means learning to become
+a great operator. In that sense, the job hasn't
+changed since the sysadmins of the 70s. Your
+role is to think critically and constantly about
+how to ship code to production more quickly,
+safely, and reliably. To run systems that are
+resilient to failure and - just as important - able
+to seamlessly scale to handle success. If you
+can do that, you'll have great job security no
+matter what titles they're using in 5 years.
+
+What does a "day in the life" look like
+for a cloud engineer?
+As with most technical questions, the lazy
+answer is "it depends". But here are some
+things you might expect to be doing on a
+typical day as a mid-level cloud engineer. (As a
+junior, replace most of these things with "sitting
+
+147
+
+
+
+next to the mid-level engineer, watching them
+do it, and asking questions.")
+
+● Writing automation for cloud resources
+such as servers, databases, and
+security policies
+
+● Creating automated pipelines to build
+and release software changes
+
+● Writing code to build tools that
+developers in your organization will use
+to help them create and deploy cloud
+software
+
+● Getting an alert to your phone that a
+cloud system is misbehaving, and
+jumping on a call with two other
+engineers to figure out what is going
+wrong and fix it quickly
+
+● Writing some automation to migrate an
+old key management server to run on
+cloud services
+
+● Doing what Charity Majors, in her
+essential piece on the future of "ops
+jobs", calls vendor engineering -
+solving a business problem by
+evaluating and gluing together various
+tools and services created by cloud
+providers and other SaaS vendors
+
+● Spending a lot of time reading
+documentation trying to figure out how a
+
+148
+
+
+
+new service works - because the cloud
+changes fast and there's more to know
+than anyone can hold in their head
+
+● Probably sitting in some meetings,
+attending some trainings, and doing
+other corporate desk-job things
+
+Hey, many of those things sound like steps in
+the Cloud Resume Challenge! (Except the part
+about meetings. The Cloud Resume Challenge
+contains zero required meetings.)
+
+Is there actually such a thing as an
+"entry-level cloud job"?
+If you ask this question on Reddit, as people
+do every day, you will probably hear a
+resounding NO. "Get some traditional IT
+experience first," many will say. "You can't build
+cloud systems without understanding the way
+we built things before the cloud."
+
+In my opinion, this advice is gatekeeping
+nonsense. The whole point of cloud was
+supposed to be creating higher-level,
+abstracted ways of building so that new
+engineers don't have to recapitulate the entire
+history of IT on their resumes in order to get
+hired. If there really is no such thing as a junior
+cloud engineer position after 15 years of
+
+149
+
+
+
+modern cloud evolution, that's a pretty sad
+indictment of our industry.
+
+But thankfully, there IS such a thing as an
+entry-level cloud job. Throughout this book,
+you'll read stories from a number of Cloud
+Resume Challenge graduates who've
+transitioned to associate-level cloud or DevOps
+engineering roles from non-technical
+backgrounds. These stories are inspiring, but
+they're not miraculous. You can do this too.
+
+It will not necessarily be easy, and it may take
+longer than you'd like. The grain of truth behind
+the conventional Reddit wisdom is that lots of
+teams don't know how to hire, support, and
+develop junior engineers. That problem is
+much older than cloud and affects all areas of
+tech - and it's even worse in our current
+remote-heavy work world.
+
+For what it's worth, I find that big companies
+tend to have better hiring processes and
+onboarding support for junior engineers than
+startups do. For example, the three big cloud
+providers all have great programs for bringing
+on associate cloud solutions architects - and if
+you can complete this challenge, you'll know
+
+150
+
+
+
+many of the things you need to excel in an
+interview.
+
+Remember, every person trying to tell you you
+don't belong in this industry yet was once a
+junior too. They made it because somebody
+took a chance on them. And despite what
+Reddit says, there are chance-taking hiring
+managers in tech. (My first boss was one of
+them.) Often, those managers come from
+non-traditional backgrounds too. They
+understand how to mentor, and they're looking
+for people who are self-directed,
+self-motivated, and aren't afraid to learn. By
+doing projects like the Cloud Resume
+Challenge, you'll start to increase the chances
+of connecting with one of those people and
+getting your first big chance - so that someday,
+you too can pass that chance along to others.
+
+151
+
+
+
+Getting unstuck: the underrated
+skill of asking for help
+
+Here's the most common way people start a
+question about their Cloud Resume Challenge
+project: "Is it cheating if I …?" (...use a static
+site generator, look at someone else's code
+repository, work on the challenge with a friend,
+etc, etc.)
+
+I try to help those people understand that this
+is the wrong way to frame the question.
+"Cheating" is a concept from school. We are
+not in school here.
+
+The goal of the project is to learn, so if your
+approach to solving the Cloud Resume
+Challenge is to copy and paste someone else's
+project without deeply understanding what you
+are doing and why, then the only person being
+cheated is you. You will not have interesting
+stories to tell in a job interview; worse, you will
+not find out if cloud building is really something
+you enjoy.
+
+But assuming you are approaching the
+challenge in good faith, I would not be too
+worried about consulting existing resources like
+
+152
+
+
+
+blogs, tutorials, and other challengers. In fact,
+figuring out how to make appropriate use of
+help is one of the most valuable - and
+underrated - skills you can hone through this
+project.
+
+Again, we're not in school here. In the
+professional world of IT, there are no bonus
+points for cloistering away in an ivory tower
+and figuring out a difficult problem all by
+yourself. You will likely be working on a team
+made up of people with different strengths and
+weaknesses, and your primary goal will be to
+solve problems quickly and adequately, rather
+than individually. That means strategically
+leveraging the help of teammates or internet
+resources who may know more than you.
+
+But other people's help is a constrained
+resource; they don't have unlimited bandwidth
+to assist you, and in fact will be significantly
+MORE likely to lend a hand if you have done
+some investigating on your own. (We might call
+this the "God helps those who help
+themselves" model of debugging.) So knowing
+when and how to escalate a problem is critical.
+
+Let's use the Cloud Resume Challenge as an
+example scenario to walk through how we can
+
+153
+
+
+
+practice proper asking-for-help skills. Suppose
+you're trying to get the visitor counter working
+on your resume site, but when you refresh the
+web page, the counter does not update.
+
+What NOT to do: The Well of Despair
+The worst thing you can do in this situation is
+to just start changing random things in your
+code, or Googling broad queries like
+"Javascript fetch statement not working". The
+responses to that search are probably not
+going to yield specific information that's
+relevant to your problem. Keep going down this
+rabbit hole, and you'll find yourself on the tenth
+page of search results, reading an unanswered
+Tom's Hardware forum post from 2003. This is
+how you get Stuck with a capital S: at the
+bottom of a deep well, with no handholds or
+even a shaft of light to give you hope you might
+find a way out, as hours turn into days. It's
+frustrating and demoralizing, both to you and (if
+you carry this style of troubleshooting over into
+a job) to your manager. Believe me, I know;
+I've been down that well myself.
+
+Three steps to get back on track
+To get out of the Well of Despair, you need a
+plan.
+
+154
+
+
+
+1. Set a time limit to get yourself
+unstuck
+
+Recognizing when you're really blocked, and
+that spending more time beating your head
+against the problem isn't going to do any more
+good, is an important skill that comes with
+practice. In the meantime, it's not a bad idea to
+set a timer: "If I can't figure out why my visitor
+counter isn't updating after 30 minutes, I'm
+going to ask for help."
+
+Within that 30 minutes, your goal should be to
+break down your big problem (my visitor
+counter isn't working) into the smallest problem
+you can (I am getting this weird error message
+and I don't understand what it means). Some
+basic troubleshooting steps to try:
+
+● Get comfortable with the developer
+tools in your browser. Right-click in
+Chrome and click "Inspect", and a whole
+new window on the world opens up to
+you. Your Javascript isn't behaving?
+Look in the Console tab and see if an
+error message appears. Your CSS
+doesn't seem to be applying to your
+HTML? Check the "Sources" tab and
+see if it really got downloaded from your
+
+155
+
+
+
+CDN. Your API isn't returning what you
+thought? Explore the "Network" tab and
+see what request you really sent and
+what response you got.
+
+● Don't gloss over error messages. I
+see lots and lots of questions in the
+Cloud Resume Challenge Discord
+server that boil down to "I got a stack
+trace; now what do I do?" Answer: read
+the stack trace! It looks scary, but most
+of it is just pointing you to the line of
+code that broke, and there will usually
+be an error message at that line
+explaining what happened. Is it saying
+something about authentication?
+Sounds like you have a permissions
+issue. Is it saying that the hash key you
+referenced doesn't exist? Sounds like
+the object you're working with doesn't
+have the data you expected; you should
+log that object and find out what's
+actually in it. Which leads to:
+
+● Log like a lumberjack. In the world of
+serverless computing, you can't SSH
+into a server; your window into what's
+happening is limited to the logging
+statements you emit from your code.
+Log the contents of objects and the
+
+156
+
+
+
+responses of API calls until you
+understand the behavior of your code.
+
+● Shorten your feedback loop. If it takes
+5 minutes to rebuild and deploy your
+code to the cloud every time you test a
+code tweak, you're going to make slow
+progress. Look into setting up a local
+development environment for your code
+so that you can "fail faster".
+
+If the timer dings and you still haven't made
+much progress on fixing the problem, then it's
+time to…
+
+2. Formulate a specific question
+Here's the wrong way to ask a question: "My
+visitor counter isn't updating, can anyone help
+me?" That question wouldn't get very good
+results if you typed it into Google, and it's not
+going to inspire many humans to sit down with
+you and figure it out from scratch either. It's too
+general. Instead, try a question like this: "My
+API returns 0 to the browser when I request the
+visitor count, but I can see the count updating
+in the database - here is my function code, can
+anybody see where the problem might be?"
+
+That question has several good qualities:
+
+157
+
+
+
+● It describes what you would expect to
+see happening (the browser's visitor
+count widget updating) versus what is
+actually happening (returning 0)
+
+● It includes a couple of things you've
+already tried (checked the API
+response, checked the database), to
+help narrow down the source of the
+issue
+
+● It gives enough context for someone
+to help (the function code), rather than
+asking them to guess.
+
+I would suggest typing out your question two or
+three times before putting it in the CRC Discord
+server or messaging it to a friend, just to make
+sure it includes these attributes - and also
+because it's hilarious how often just carefully
+writing out your question forces you to think
+through it systematically, which leads to you
+solving your own problem without needing to
+wait on anyone else.
+
+If you find that you can't express your question
+coherently - say, because your question is
+"how do I write Javascript?" - then it's time to
+go back and do a little more learning, maybe
+run through a video course or a tutorial on the
+
+158
+
+
+
+technology in question, before you tackle this
+problem.
+
+3. Build relationships
+The most reliable way of getting help,
+especially from strangers on internet forums, is
+simply "being a person people want to help,"
+which starts with asking good questions but
+also includes being a positive contributor to the
+community. Don't be the person who always
+takes but never gives; stick around and answer
+other people's questions too. It turns out that
+researching or troubleshooting someone else's
+error is also a great way to learn - and great
+job practice, too.
+
+Even if you do all these things, you may still
+occasionally find yourself staring into the Well
+of Despair. Google's no help, your
+troubleshooting skills are maxed out, and
+nobody's responding to your question in the
+Discord server. If that happens, I would
+suggest getting up from your screen, going
+outside, and delegating the problem to
+Tomorrow You. It's amazing how revelatory a
+simple walk around the block can be.
+
+159
+
+
+
+The career-changing art of reading
+the docs
+Even if you don’t have any aspirations to build
+a public following, there is tremendous career
+value in becoming the go-to person within your
+technical niche.
+
+The person who everybody on your team
+comes to with their toughest question about
+that language or framework. The person who
+knows where all the bodies are buried in
+ActiveDirectory or Typescript or DynamoDB.
+Those folks have great careers and job
+security because authoritative knowledge like
+that is rare.
+
+To some extent, it’s rare because wisdom only
+comes with experience. But I know plenty of
+engineers who’ve sat in the same chair for ten
+years getting the same year of experience ten
+times. Heck, I’ve been there myself; I spent a
+couple of years as an “accidental DBA” who
+never really learned that much about SQL
+Server beyond what the daily firefighting
+required.
+
+I used to spend a lot of time wondering how
+other people seemed to level up so quickly on
+
+160
+
+
+
+new technologies. How do you break through
+that stagnant cycle of learning and forgetting
+stuff in bits and pieces, using the same
+technology for years without ever feeling like
+an expert?
+
+A few years ago I learned a secret for doing
+this, a cheat code if you will, from my friend
+and AWS Hero Jared Short. This is his secret
+recipe for leveling up in tech:
+
+Read the documentation for one
+job-relevant technology, cover-to-cover,
+every week.
+
+161
+
+
+
+Reading docs: the wrong way and the
+right way
+I get it, that doesn’t sound revolutionary.
+“RTFM” is literally as old as computing itself.
+It’s the classic kiss-off answer to questions you
+ought to be able to Google.
+
+And that betrays a key limitation in how a lot of
+us think about documentation. We think of it
+
+162
+
+
+
+tactically, as a resource to query when we have
+a specific question or encounter a particular
+error. We use docs to fill in our known
+unknowns.
+
+That’s how you can get stuck for years, say,
+administering a PostgreSQL cluster and never
+really becoming that deep of an expert on
+Postgres. If you only learn something new
+when the situation demands it, your mental
+model of Postgres (or whatever) will look like a
+gradually expanding version of this:
+
+Over time, as you encounter more new use
+cases for the technology, you’ll burn more
+
+163
+
+
+
+“never forget” bubbles into the mental model.
+But you’ll still have this heavy sense of
+unknown unknowns hanging over you, and
+you’ll never be sure if you’re really using the
+optimal approach to solve a new problem.
+
+Instead, Jared’s approach is to read docs
+strategically, preemptively, curiously: as a way
+to fill in your unknown unknowns. The things
+you might not encounter in ten years, but that
+would cost you two days of troubleshooting if
+you ran into them tomorrow.
+
+Read docs like novels (cover to cover), not like
+dictionaries (look up the term, cross-reference,
+and stop). Over time, that strategy will lead to a
+mental model of your professional domain that
+looks more like this:
+
+164
+
+
+
+(This is the same benefit you get from studying
+for certifications, by the way: you’re building a
+mental map of the domain, so you don’t have
+to stumble through the darkness on every new
+quest.)
+
+On the surface, that sounds simple, but it’s far
+from easy. Here are three common objections
+people raise when I advise reading docs as a
+career-advancement strategy:
+
+“I don’t have a photographic memory. I’ll
+never remember a bunch of random docs.”
+
+Back when I was in college, a well-meaning
+friend convinced me I should read a book on
+SAP. Forget today — I couldn’t have told you a
+
+165
+
+
+
+single thing about SAP ten minutes after
+finishing that book. I’d never been inside an
+enterprise, much less understood the problems
+these ERP integrations I was reading about
+were supposed to solve. It was like trying to
+talk to the aliens in the movie Arrival: my brain
+was the wrong shape.
+
+Likewise, you probably won’t get much value
+out of glancing through docs for a technology
+you don’t use and have no context for.
+
+So do these two things:
+
+1. Focus on docs for technologies you are
+already using. We’ve all had that
+mind-numbing feeling when plowing through
+some esoteric text that doesn’t relate to our
+daily lives, where you glaze over for three
+pages and then go, “what did I just read?”
+
+Avoid this by focusing on docs for technologies
+or languages you’ve already got a vested stake
+in – say, because they’re on your plate at work
+or you’re trying to build them into a side
+project.
+
+166
+
+
+
+Encourage active reading and engagement
+with the information by asking yourself
+questions like these as you read:
+
+● Did I understand that? (If not, maybe
+read the section again)
+
+● Does what I just read match my existing
+mental model of how this technology
+works? (If not, do I need to go review a
+different doc and then come back to
+this?)
+
+● Could this feature or fact help me on my
+current project?
+
+● If I had known this six months ago, what
+would I have done differently? (“Chosen
+a different technology” is a totally
+acceptable answer!)
+
+Then, 2. Read those docs repeatedly, on a
+schedule, over and over. Seriously. If you’re
+on a team that’s building out centralized CI/CD
+for AWS, maybe read the part of the AWS
+CodeSuite docs on CodePipeline this week
+and the part on CodeBuild next week, and
+when you get to the end, start over. The cloud
+changes fast. You’ll fold in new information at
+the same time you’re reinforcing the old.
+
+167
+
+
+
+“I don’t have time to read a bunch of
+documentation.”
+
+Yes, and weeks of work can save you hours of
+planning. Maybe use some of the time you
+currently spend injecting “HERE” print
+statements into your code to figure out why it’s
+not working.
+
+More seriously, it’s not a bad idea to block a bit
+of time on your calendar each day – 30
+minutes, even – for targeted doc-reading. You
+may find it hard to carve that time out of your
+workday, but defending time and setting
+expectations with your manager is its own skill,
+worth practicing. Call the block of time “deep
+work.” It is.
+
+168
+
+
+
+“The docs for [technology X] are no good.
+Trust me, they’re not worth reading.”
+
+I don’t always buy this excuse. The docs might
+not be that bad; you might just have the wrong
+expectations.
+
+For example, the AWS documentation gets a
+terrible rap for being wordy and
+poorly-organized. And it’s maybe even worse
+than you’ve heard – if you’re trying to look up
+the name of an IAM action or the syntax of a
+CLI command, that is.
+
+But as an educational tool that dives deep on
+the architectural underpinnings and technical
+limitations of services, the AWS docs are
+fantastic. They’re better than any book you
+could ever buy about the cloud. (And the
+Builder’s Library is better still.) The AWS docs
+are designed not just to be referenced, but to
+be read. Read ’em!
+
+On the other hand, some types of docs like
+step-by-step tutorials are very much designed
+to be referenced during hands-on builder time.
+It may not make sense to spend a lot of time
+reading those in the abstract. So bring your
+common sense.
+
+169
+
+
+
+However, there are also plenty of technologies
+out there where the docs are truly incomplete,
+out of date, or just plain wrong – many smaller
+open-source projects, in particular.
+
+Turns out you have another option here, at
+least for OSS projects: read the source code.
+Not sure what a module does, what its edge
+cases are, what the error code means? Read
+the source code and find out! It might be faster
+than (and will definitely be at least as accurate
+as) looking for the answer in the docs, even if
+the docs are pretty good.
+
+If you write code for a living, reading other
+people’s shipped, battle-tested code — not just
+PRs from your own team — is genuinely one of
+the most transformative things you can do for
+your career. Because while you’re answering
+your immediate question, you’ll also be picking
+up style, organization, and technique from
+professional programmers operating under all
+kinds of interesting constraints. Seriously. Read
+code.
+
+(And then, if it’s open-source, maybe consider
+contributing some docs!)
+
+170
+
+
+
+What do I get out of all this?
+If you read a targeted set of docs consistently
+over a sustained period — say, a couple of
+years — while actively practicing on that
+technology, you will be able to perform magic.
+That’s a promise.
+
+Let’s go back to Jared Short again for an
+example. (Yes, I checked with Jared, he
+graciously agreed to let me spill his secrets in
+this piece.) As an engineer at an AWS shop,
+Jared …
+
+● Reads the documentation for one AWS
+service, cover to cover, every week.
+
+● Blocks daily time for this on his
+calendar.
+
+● Focuses on services he’s actually using
+at work (he tells me that so far in 2021,
+he’s been through all the docs for
+Lambda, AppSync, and Step Functions).
+
+Jared’s been doing this week in, week out, for
+*years*. And that unglamorous commitment
+lets him perform nerd magic like this:
+
+171
+
+
+
+If you don’t want to take the time to read that
+whole Twitter thread, let me sum it up for you.
+
+1. An experienced AWS engineer
+encounters a weird behavior: AWS
+Lambda seems to be executing code
+when it should not be. He posts a plea
+for help on Twitter.
+
+2. Other experienced engineers take a
+look and go, “huh. Weird.” To be clear,
+this is not a case of RTFM. The problem
+is nontrivial and the solution, if there is
+one, is not well-known. Somebody starts
+tagging in AWS employees for advice.
+
+3. Jared waltzes in and immediately
+suggests an answer: Lambda is tripping
+
+172
+
+
+
+an error during its startup sequence and
+resetting the execution environment.
+Jared guesses this even though he’s
+never encountered that specific
+situation, because he has internalized a
+passing reference in the docs for
+Lambda Extensions – a totally different
+feature – and intuited that the underlying
+behavior must be the same.
+
+4. AWS employees confirm that Jared is
+right.
+
+5. The legend of Jared grows slightly
+bigger. Guess who’s gonna get tagged
+instead of the AWS employees next time
+there’s a weird Lambda problem?
+
+That’s how you become an AWS Hero, folks.
+Or at least a hero on your engineering team.
+It’s how you level up, get known, get paid, get
+promoted.
+
+Don’t wait for knowledge to find you through
+years of inefficient trial and error. Go get it. And
+the most convenient, comprehensive place to
+grab it was there in front of you all along.
+
+Read the docs.
+
+173
+
+
+
+Mapping your path to a cloud job
+
+I find there are two main categories of people
+who read this book:
+
+● People with no professional technical
+background at all
+
+● People who have worked in some older
+form of IT, but have little or no
+experience with cloud technologies
+
+While the challenges in this book can be a
+great advantage that set you apart from other
+job candidates, you have to know how to place
+them in the context of your existing experience,
+and how to fill in the other gaps hiring
+managers may be interested in.
+
+Getting hired without tech experience
+For hiring managers, real-world experience
+trumps everything. Certification, formal
+education, side projects -- they all have value,
+but someone who's Done It Before and gotten
+paid for it will always have the upper hand in
+an interview.
+
+174
+
+
+
+Don't be discouraged, though. You can
+absolutely compete and win junior-level cloud
+jobs without previous IT experience. The Cloud
+Resume Challenge is your ace in the hole
+here. Remember, what you're building is real,
+and it's complex enough that many of those
+"experienced" people - even, in some cases,
+the hiring managers themselves! -- have never
+done anything like it.
+
+You will, however, likely need a bit broader and
+deeper background to really pass a cloud
+interview.
+
+How long will it take me to get
+hired after completing the
+Cloud Resume Challenge?
+
+175
+
+
+
+One to twelve months is the average from
+career-changers I've heard from; however,
+this is a biased metric that probably
+self-selects for success. The odds of getting
+hired will greatly increase if you work on all
+elements of the "skill stack" shown in this
+section.
+
+Check out the detailed post by this Redditor
+who breaks down all the certs, projects, and
+skills they worked on over a six-month period
+before getting hired into a $70k/year job. One
+interesting feature you may note in that
+timeline: they didn't attempt the Cloud
+Resume Challenge until fairly late in the
+six-month window, getting hired about 1.5
+months later. In the comment section, this
+person confirmed that they held off on the
+challenge for so long because they just didn't
+feel ready for it yet -- and this is totally valid.
+
+Building your skill stack
+I encourage aspiring cloud engineers to build a
+"skill stack" that looks like the following:
+
+176
+
+
+
+Cloud is the latest in a long line of IT
+paradigms. But though it’s highly in demand,
+“cloud” isn’t exactly a skill on its own. Hiring
+managers are going to want to see that you
+have knowledge in several foundational areas.
+
+Code
+You must be able to write basic scripts. I
+recommend Python as a programming
+language to learn — it’s used on cloud teams
+the world over. You don’t need to be a rock star
+at algorithms and data structures, but you
+
+177
+
+
+
+should know how to manipulate data objects
+and interact with cloud services.
+
+Networking
+You will be expected to have solid familiarity
+with how the internet works. DNS, TCP/IP, and
+certificates — these protocols will rule your life
+in the cloud, where everything is made up of
+services talking to each other over a network.
+
+Linux
+Linux is just as relevant in the cloud as it was
+in old-school sysadmin jobs. Know how to
+navigate the Linux filesystem, use Vim and
+terminal commands, and a bit about
+containerization.
+
+The friends of the Cloud Resume Challenge
+behind Learn To Cloud have lots of resources
+to help you dig deeper into each of these
+areas.
+
+When to apply
+Once you have built a hands-on project that
+touches each of the basics listed above, I
+would say go ahead and start applying for
+associate-level cloud support and engineering
+roles. You should continue to improve your
+skills and level up your resume during this
+
+178
+
+
+
+process by studying for a professional- or
+specialty-level certification on your chosen
+cloud, like the GCP Professional Architect. It’s
+okay if you haven’t taken the exam yet; hiring
+managers like to see that you are
+self-motivated and keep learning on your own.
+
+It may feel uncomfortable to start interviewing
+at this stage, and you may encounter some
+early rejection. But the weaknesses these
+interviews expose will help you keep a short
+feedback loop to go back and polish up those
+key coding, Linux, and networking skills.
+
+Plus, now that you’ve been through the
+foundational study process, you’ll have a better
+sense of where you might want to specialize,
+and why. You can share that information in an
+interview – along with the war stories you
+picked up from your portfolio projects.
+
+Will the transition to your first cloud job take a
+lot of work? Quite possibly. You can expect to
+spend some late nights at the kitchen table and
+some time down frustrating rabbit holes on
+StackOverflow. But a few months of dedication
+here is going to pay lucrative dividends down
+the road.
+
+179
+
+
+
+Because if you study smart and build your skill
+stack the way I’m showing you, you won’t have
+to spam out thousands of resumes and wonder
+why nobody’s calling you back, no matter how
+many certifications you’ve lined up. The right
+combination of certs and hands-on builder
+experience will stand out among the crowd,
+and that’s the fastest way to get ahead in the
+cloud.
+
+Getting hired with IT experience, but
+no cloud experience
+Often, when I give presentations about the
+Cloud Resume Challenge, I tend to focus on
+the stories of people who used it to find their
+way into cloud jobs from completely different
+careers, like plumbing or HR. That's because
+these stories are surprising!
+
+But inevitably, after those talks people tell me:
+"I want to get into cloud too, but I have 15
+years of experience in IT. Can the challenge
+work for me?"
+
+Absolutely, it can.
+
+Remember, almost 40% of people who
+undertake the challenge have more than 3
+years of professional IT experience. So it can
+
+180
+
+
+
+still be a valuable addition to your resume even
+if you're not brand new to the industry.
+
+That said, you'll have different challenges - and
+different advantages - landing a cloud
+engineering role as a mid-career IT admin or
+software developer compared to someone
+who's just starting out.
+
+Exploiting your "unfair advantage"
+In the startup world, venture capitalists like to
+talk about finding your "unfair advantage".
+What is the thing you do better than anybody
+else, the thing nobody can compete with?
+
+If you already work in some form of tech, your
+unfair advantage in finding a cloud job may
+simply be that you already work in tech. You
+have more connections and more situational
+awareness. IT is in your blood.
+
+Most importantly, you may have opportunities
+to get hands-on with cloud at your current
+work. Is your team doing a migration project
+that requires somebody to know a little bit
+about EC2 or VPC? Are you an integration
+engineer with opportunities to run some scripts
+in the cloud? Push yourself, get outside your
+comfort zone, and build your resume.
+
+181
+
+
+
+I suggest a three-step process for converting
+an existing skill to cloud:
+
+1. Build the thing you know.
+
+Let's say you're a SQL Server DBA, like I used
+to be. Great! Stand up a SQL Server on an
+EC2 instance. You can do this completely by
+hand; just ClickOps your way through it in the
+AWS console. Your main goal here is the what,
+not the how: to end up with a running server
+that executes queries and connects over the
+same ports you're used to seeing in the old
+data center. Cloud's not so different after all!
+
+2. Automate the thing.
+
+Now you want to stand up that server again,
+but do it the DevOps way. Instead of manual
+clicking in the console, create a Terraform
+config to manage your EC2 instance. Bake an
+AMI that includes your SQL Server. Add some
+user data automation to get the server standing
+up the way you want. And throw in a little
+CI/CD pipeline, just like in the Cloud Resume
+Challenge, to make sure you're getting that
+config from your laptop to the cloud the same
+
+182
+
+
+
+way every time. When the end result of step 2
+looks like the end of Step 1 …
+
+3. Convert the thing to managed
+services.
+
+Now's when you can start looking around the
+cloud and expanding the circumference of what
+you already know to things the cloud does a
+little differently. Hey, instead of rolling your own
+EC2 instance, what would it be like to use the
+managed RDS version of SQL Server? What's
+this "Amazon Aurora" thing? You can ask
+comparative questions that draw on your own
+experience:
+
+● Where am I giving up control in
+exchange for lower operations burden?
+
+● What features am I used to that may not
+be available in this managed service?
+
+● How fast does this service run? If it
+seems to respond a lot slower than the
+applications I used to run in the data
+center, why is that, and is there a fix?
+
+But be realistic about this. If the cloud
+experience you're looking for can't be had in
+your current role, don't hang around forever
+waiting for it. It may make sense to start
+
+183
+
+
+
+looking for a new position that may not have
+the fancy "Cloud Architect" title, but will let you
+get hands-on with AWS in some capacity. The
+type of role where previous cloud experience is
+a "nice-to-have", not a "must-have".
+
+The Cloud Resume Challenge may be a nice
+assist in helping you stand out for that role - it
+could be your "unfair advantage" at a crucial
+moment in your career.
+
+Avoiding a temporary step back
+One challenge of revamping your skill set for
+cloud: you may find that many of the
+opportunities you get as a junior cloud
+engineer are a financial step backwards from
+what you were making in a less future-proof,
+but more senior role.
+
+Depending on what you're doing right now, it
+may be difficult to find a cloud-related role that
+pays what you need. It's a hard sell to go from
+senior sysadmin to junior cloud engineer.
+That's why I'm recommending that you try to
+build cloud skills on the job, rather than starting
+from scratch.
+
+It's also true that, due to the explosion of
+remote work combined with the huge demand
+
+184
+
+
+
+for cloud talent, more and more companies are
+opening up to the idea of hiring consultants for
+cloud project work. Startups are especially
+noted for doing this, usually with low friction
+and a high degree of autonomy.
+
+You may also choose to take a "stepping
+stone" role, somewhere in between your
+current IT job and a true cloud engineering
+position, that lets you use your existing skill set
+while getting closer to cloud. I've listed several
+ideas for "stepping stone" roles in this video.
+
+185
+
+
+
+How to effectively interview for
+work with a portfolio site
+a guest essay by Corey Quinn
+
+If you've taken the Cloud Resume Challenge,
+it's reasonable to assume that you're looking to
+start a career in the world of cloud computing.
+Congratulations or condolences, to your
+preference.
+
+There’s a good chance that in hopes of snaring
+your next great job, you’ve built a portfolio
+website on top of AWS to show off your cloud
+computing prowess. Unfortunately, the
+interview process isn’t as easy as saying,
+"Here's the site I built, where's my desk?"
+
+Instead, let’s explore how to talk about the site
+you've built in ways that answer the questions
+your interviewer has, but likely isn't going to do
+a great job of articulating.
+
+The three questions interviewers
+ultimately want you to answer
+Every job interview you ever have distills down
+to three questions, asked in a variety of ways.
+They come down to your ability, drive, and
+
+186
+
+
+
+compatibility. Cast the questions your
+interviewer asks through the lens of these
+high-level questions, and you'll understand
+where the employer is coming from a lot better.
+
+1. Can you do the job?
+Are you crap at computers?
+
+Do you have the raw technical skills needed to
+do the job? Do you have experience working at
+similar points of scale? Are you current with the
+technologies we work with / can become so in
+a reasonable timeframe?
+
+The hiring manager absolutely needs to have
+confidence that you can get the job done. It
+doesn’t matter how much they like you, how
+convenient it would be to hire someone
+immediately, or how impressive your resume is
+if you’re fundamentally incapable of doing the
+job that they need done.
+
+2. Will you do the job?
+Are you going to rage quit in a month?
+
+Is the role aligned with your interests, or are
+you likely to job-hop six weeks in and leave the
+employer back at square one? Will you be
+happy in the role, or will you hate large parts of
+
+187
+
+
+
+it and constantly try to avoid them? Does the
+job align with your future plans?
+
+Hiring people is expensive. Once they start, it’s
+even more expensive because now other staff
+needs to devote time and energy to bringing
+the new hire up to speed. If you’re going to quit
+before the company has the chance to realize
+that investment, you’re not a solution, you’re an
+expensive problem.
+
+3. Can we stand working with you?
+Are you a jerk?
+
+Are you going to pick fights with colleagues?
+Are you going to interrupt people when they’re
+explaining things? Are you going to presume
+that your coworkers are fools?
+
+If you're amazing at the role but can't
+collaborate with other people for more than
+four hours before they threaten to quit, you're
+not a hire that any reasonable company is
+willing to make.
+
+How to show off your portfolio site
+during interviews
+The Cloud Resume Challenge was posted in
+2020 and continues to be a popular structure
+
+188
+
+
+
+for folks new to cloud to demonstrate their
+skills. The challenge outlines requirements for
+cloud career hopefuls to go through the
+process of building a blog on top of AWS and
+creating a blog post. This includes:
+
+● Passing the entry-level Cloud
+Practitioner certification.
+
+● Creating an HTML version of your
+résumé.
+
+● Styling with CSS.
+● Hosting on S3.
+● Configuring DNS correctly to get TLS
+
+working
+● Enabling a counter with Javascript that
+
+stores its data inside of a database.
+● Building an API in Python for the
+
+previous two things to communicate.
+● Testing for the aforementioned Python.
+● Making sure all of this lives in GitHub,
+
+via "Infrastructure as Code."
+● Putting in place CI/CD for both the
+
+frontend stuff as well as the backend.
+● Above all else, writing the blog post!
+
+If it wasn’t clear, this is a lot of stuff.
+
+It touches basically everything under the sun in
+terms of cloud skills. It requires research and
+
+189
+
+
+
+asking for help. In the process, you’ll discover
+some aspects that naturally align with how you
+think while other stuff remains a mystery to
+you.
+
+In the context of an interview, if you say
+building this site was all easy, absolutely
+nobody will believe you. Be prepared to talk
+about what parts were easy for you, which
+parts were challenging, and why you made the
+choices that you did. Be prepared to pull up
+different sections of the code you wrote (this is
+part of the reason to keep it in GitHub—easy
+demonstrations mid-interview!) and show the
+parts you're particularly proud of. Be prepared
+to explain any aspect of your code in terms of
+why it works the way that it does.
+
+Let me underscore the importance of being
+prepared. It may take you a minute or two to
+come back up to speed if it's been a few weeks
+or months since you built your portfolio. Most of
+us see code we wrote six months ago as
+having been written by a stranger.
+
+Talk through your thought process during the
+interview. You want to show the interviewer
+how you think.
+
+190
+
+
+
+Reminder: Interviews are two-way
+streets
+If your interviewer makes comments along the
+lines of "that doesn't seem hard to me" or is
+otherwise dismissive of your portfolio, it's a red
+flag.
+
+Someone who's universally good at everything
+contained within the Cloud Resume Challenge
+is an incredible rarity. Prospective employers
+who don't recognize that are likely to have
+incredibly unreasonable expectations for their
+staff. I'm pretty good with the cloud stuff myself,
+but the JavaScript, CSS, and testing portions
+are all things I'd struggle with if I personally did
+the challenge.
+
+I absolutely understand being in the position of
+"I need a job, any job." I spent a lot of time
+there myself in my early career days! But if you
+have the luxury of being picky, the first thing I'd
+veto is obnoxious managers and
+colleagues—especially those who
+underestimate the work and workload. The job
+and its managers should be as good a fit for
+you as you are for them.
+
+Remember those three questions an
+interviewer is trying to figure out the answers
+
+191
+
+
+
+to? You need to find your own answers to
+them, too.
+
+1. Can I do the job?
+2. Will I do the job?
+3. Can I stand working with you?
+
+If the answer to any of these is “no,” you
+should think long and hard before accepting
+the job.
+
+Tech takes a backseat to company
+culture and learning
+A lot of folks are very picky about what
+technologies they'll work with. I get it! If I were
+taking a cloud job, I'd be far less useful in a
+shop that used Azure than I would one that
+used AWS. But I'll put even that preference in
+the backseat compared to how I'd consider
+working somewhere that didn't treat people like
+human beings.
+
+Technologies come, and technologies go. The
+danger in tying your identity so closely to a
+particular stack is that when the technology
+starts to be supplanted in the market, you're
+more likely to dig in your heels and resist the
+change.
+
+192
+
+
+
+It happens to all of us. I started my technical
+career as a large-scale email systems
+administrator. The SaaS wave started
+supplanting email because most companies
+don't need a dedicated on-site email admin
+when they're using Gmail or Microsoft 365 to
+serve their email needs. It was apparent that
+this wasn't going to be something I could coast
+on for the next four decades, so it was time to
+improve my core skillset and embrace
+something else. I focused on configuration
+management for a time, using tools like Puppet
+and SaltStack—and then it happened again.
+Containerization and "immutable
+infrastructure," particularly infrastructure as
+code, changed that particular landscape.
+
+These days I focus on cloud, specifically AWS.
+If AWS starts losing market share and mind
+share, it'll be time for me to once again shift to
+embrace whatever the market is doing.
+
+One thing about technology that stands in stark
+contrast to many other professions such as
+accounting, law, civil engineering, and many
+more: Today's "state of the art" is tomorrow's
+"how legacy companies do things." You'll be
+forced to learn new things and experiment
+wildly as you evolve your career, and so will
+
+193
+
+
+
+the companies you work for. That's going to be
+something you need to take to heart, lest you
+wind up with 10 years of experience that's
+really just one year that you repeated 10 times.
+"Evolve or die, dinosaur," is the way this
+industry works.
+
+194
+
+
+
+Networking your way to a job
+
+I have hired many people over my 10+ years in
+technology, and helped others transition into
+their first tech jobs through the 26-month life of
+the Cloud Resume Challenge. In all that time,
+the worst way to find a cloud job that I have
+seen is by playing a game I call Resume
+Roulette.
+
+Resume Roulette: a losing game
+Resume Roulette is easy to play but very hard
+to win. Here are the rules:
+
+1. Wait for random companies to post
+public job listings
+
+2. Spam out a bunch of applications
+3. Hope that some stranger likes your
+
+resume enough to set up an interview
+4. If you don’t strike it lucky, repeat steps
+
+1-3 indefinitely until you get hired or
+burn out
+
+Do people get hired by doing this? Sure, every
+day. You can find inspiring stories on LinkedIn
+of people who sent out 190 job applications,
+got 10 interviews and 1 job offer. But far more
+
+195
+
+
+
+get discouraged and give up long before then. I
+know I would.
+
+In fact, when I do hear of someone beating the
+odds and getting hired after sending out
+hundreds of cold resumes, I don’t think “Wow,
+that’s great perseverance” (although it certainly
+is) — I think “We are celebrating a broken
+process.”
+
+How hiring happens
+Let me tell you what happens inside most
+companies when they list a public job posting:
+
+1. 150 random people submit their
+resumes, some of which are pretty good
+and some of which are pretty bad. Hard
+to say without really digging in.
+
+2. Three current employees know
+somebody who would be great in the
+role, and they submit referrals with a
+glowing recommendation: “I worked with
+her at Company X! She would kill at
+this!”
+
+If you’re a recruiter (or especially a
+time-strapped hiring manager), which resumes
+are you going to move to the top of the pile?
+
+196
+
+
+
+Many companies offer referral bonuses to their
+employees for exactly this reason: the best hire
+is often someone your existing team already
+knows. And it’s much more efficient to vet
+those people than to do a phone screen with
+150 total unknowns.
+
+(Yes, there are a few companies out there, the
+Googles of the world, that have such a
+massive recruitment engine that they can
+reliably crank through hundreds of thousands
+of unsolicited resumes every year. But you’re
+fighting a numbers game there as much as
+anywhere else – you’re just more likely to get a
+formal rejection, rather than having your
+application sit ignored for six months.)
+
+Network Bets: a better game
+But that doesn’t mean you’re stuck on the
+outside looking in. You should not have to send
+out 190 job applications to get a cloud job.
+There is MASSIVE demand for qualified
+professionals in this field! If you know your
+stuff, companies should be basically coming to
+you.
+
+But to come to you, they have to know about
+you!
+
+197
+
+
+
+So in my experience, the BEST way to get a
+cloud engineering job is to play a different
+game, one we might call Network Bets, a game
+with many ways to win but just two rules:
+
+1. Own your credibility
+2. Build connections
+
+Owning your credibility
+I covered foundational cloud skills in more
+detail above, so I won’t reiterate everything
+here, but if you’re brand-new to cloud you need
+to make sure you have:
+
+● A solid ability to write code in Python or
+another common back-end language
+
+● Hands-on familiarity with Linux and
+network fundamentals
+
+● A foundational cloud certification or two
+
+If you don’t get your feet under you here,
+you’re just going to be demoralized coming out
+of interviews. I don’t want you to be
+demoralized! I want you to skip to the head of
+the line.
+
+Getting proficient at code, networks, and Linux
+(not a rockstar! Just the basics!) is your cheat
+
+198
+
+
+
+code. Seriously. Do it. You can get there faster
+than you think. Projects help.
+
+Building connections
+Yes, this is the part where we talk about
+networking. No, not about getting your CCNA,
+I’m talking about knowing the right people to
+work with.
+I’ve noticed that a lot of engineers tend to
+bristle when faced with the idea that they might
+have to network in order to land a good job:
+“My skills should stand on their own. My career
+shouldn’t depend on having connections; that’s
+not fair.”
+
+But what they are missing is that connections
+go both ways. You are more than just an
+interchangeable YAML-generation unit. You are
+a person with likes and dislikes and personality
+quirks of your own. There are tech jobs out
+there that would be toxic for you, where you
+would not be happy or productive — and plenty
+more where the work itself simply isn’t
+interesting or beneficial to your future career.
+
+And when you fling random job applications
+into companies you know nothing about, you
+face the very real possibility that even if you do
+
+199
+
+
+
+win the lottery and get hired, it’ll be on a team
+that is nothing but bad news.
+
+Networking is your chance to vet the job
+market at the same time they are vetting you. It
+lets you figure out the good people to work
+with, at companies where you will fit in and be
+set up for success.
+
+But I’m an introvert … I can’t
+network!
+I’m an introvert too! In fact, I’d venture to guess
+the majority of people in technology are. The
+amazing thing about building public credibility
+in tech is that you don’t have to go around
+glad-handing, passing out business cards or
+whatever. (Not that that would even work!)
+
+As AWS Hero and fellow introvert Alex DeBrie
+points out, the internet lets you connect with
+people very effectively through less draining,
+more asynchronous means.
+
+As long as you are demonstrating passion for
+your skills in public, you’ll find yourself
+encountering great people and opportunities.
+
+So let’s run through three practical ways to
+make that happen. Here are my cheat codes
+
+200
+
+
+
+for networking your way to a cloud job that will
+actually be good for you and your career:
+
+1. Find a new niche
+If you’re new to the cloud, you stand an
+obvious disadvantage against more
+experienced people. Many people try to close
+this gap with certifications, but the most
+common entry-level credentials are not that
+impressive to hiring managers. (You have an
+A+ cert? Cool, so do 100 million other people!)
+
+So the smart move is to stop playing the game
+everyone else is playing — to skip to the head
+of the line and get good at cloud services that
+are so new, nobody has that much experience
+in them. After all, nobody can ask for 5 years of
+experience in a technology that’s only existed
+for 18 months.
+
+I’m not talking about becoming an expert in a
+huge, broad area like the entire Kubernetes
+ecosystem. You can find a niche here that is
+really specific. Here is a list of some hot cloud
+tools and services that are in desperate need
+of more community attention. There are many,
+many others; this is just what I could write
+down in 60 seconds.
+
+201
+
+
+
+1. AWS AppSync/Amplify (managed
+GraphQL gateway and associated
+front-end framework)
+
+2. The AWS Code* stack (CodeBuild,
+CodeDeploy, CodePipeline)
+
+3. Serverless workflow services (AWS
+Step Functions, Azure Logic Apps)
+
+4. A managed Kubernetes service like
+GKE, AKS or EKS
+
+5. Popular Infrastructure as Code tools like
+Terraform or the AWS CDK
+
+If you get good at any one of these 5 things,
+you are guaranteed to make some interesting
+friends and raise your profile as a cloud
+technologist, as long as you also …
+
+2. Plug into the community
+As you start getting hands-on with your chosen
+technology, write about what you are learning. I
+suggest using an established developer
+blogging platform with some built-in network
+effects, like Hashnode or dev.to. For example,
+if the service you are learning about releases a
+new feature, write up a short exploration of
+what it does and why you are excited about it.
+
+Then, SHARE those good vibes! And tag the
+creators of the feature you are excited about.
+
+202
+
+
+
+Devs love to see their good work recognized,
+and they will welcome you with open arms.
+
+You will also start to discover Slack and
+Discord channels, Twitter hashtags, etc, that
+your chosen community rallies around. Engage
+with these outlets and note who the influencers
+are — the people you would want to be your
+mentors if you knew them.
+
+I highly recommend joining Twitter and
+following key influencers in your niche. Engage
+with them, reply to their tweets with questions.
+People remember people who engage with
+them positively and helpfully. And you’ll start to
+branch out into other connections as well.
+
+Then, when you see a job opportunity pop up
+inside that community (which is guaranteed to
+happen)…
+
+3. Ask for referrals
+This feels really uncomfortable at first, but it’s
+way easier than it seems. You can literally just
+message people who work at the company you
+are interested in and politely ask for a referral
+for the open job position. Without pestering,
+you could even ask if they have any openings
+
+203
+
+
+
+that are not publicly listed. The worst they can
+do is say no.
+
+But remember – they’re likely incentivized by
+their company to say yes. And they’re much
+more likely to give you that boost if you’ve
+interacted with them by building and sharing
+work in their space in the past. If you’ve
+blogged or built open-source projects, they can
+pass that along to their internal recruiters. And
+familiarity with them gives you a shared basis
+of trust to know if this role and company would
+really be a good fit for you.
+
+I'd also be remiss not to recommend The
+Coding Career Handbook, written by ex-AWS
+and Netlify developer (and friend of the
+challenge) Shawn "swyx" Wang. His book goes
+into much more detail about how to play and
+win the online networking game.
+
+Play the long game – it’s a shortcut
+Landing a job through the Network Bets
+process — nailing down the fundamentals,
+finding a cloud niche, and getting plugged into
+the community — is not necessarily fast. It
+could take six months to a year or more. But
+that’s a lot faster than getting a college degree.
+Plus, you can do it very cheaply and in your
+
+204
+
+
+
+spare time – while building connections that
+ultimately will pay off for decades to come.
+
+On the contrary, Resume Roulette has no
+barrier to entry, but is a bad game because it
+has so many poor outcomes:
+
+1. You compete with everyone else on the
+job market, decreasing your chances of
+getting hired
+
+2. You go months or years without getting
+hired, and you get so disillusioned that
+you stop searching
+
+3. You actually *do* get hired, but in a job
+that’s not a good fit for you
+
+So be active, not passive. Own your credibility.
+And create a niche for yourself, don’t wait for
+the perfect opportunity to open up. That’s the
+best way to find a cloud job that becomes the
+foundation for an awesome career.
+
+205
+
+
+
+Afterword: The side project
+that made the front page
+​​We've talked a lot in this book about the value
+of cloud projects, both as a way to get hired
+and for ongoing professional development.
+
+But not too many cloud side projects end up
+creating front-page news.
+
+The “CPS [Chicago Public Schools] dad” in
+that linked article is Cloud Resume Champion
+Jakob Ondrey, who we've already met in this
+book as our Chunk 2 case study. He needed a
+little extra push to make the career transition to
+cloud after completing the Cloud Resume
+Challenge, so while still working in the
+infectious disease lab at Chicago’s Lurie
+Children’s Hospital he decided to take on the
+COVID case count dashboard project I created
+at ACG. Instead of using the default US case
+numbers, Jakob scoped his project to focus on
+data reported by his local schools.
+
+Jakob landed a DevOps engineer job in 2021
+on the strength of his project portfolio, but still
+maintains his dashboard of CPS COVID cases.
+When the calendar flipped over to 2022, he
+
+206
+
+
+
+noticed something strange: the numbers
+stopped adding up.
+
+Source: CPS Covid Twitter
+
+Up until January 2022, the daily COVID cases
+reported by the school system (blue line) had
+tracked the overall cases reported in the district
+(red line) more or less exactly. But right around
+the turn of the new year, the lines diverged: the
+district cases shot way up in the midst of
+Chicago's Omicron wave, while reported
+school cases actually went down.
+
+This didn't seem right. And it wasn't.
+
+Jakob did a deep dive into the data and
+concluded that the Chicago school system had
+
+207
+
+
+
+intentionally changed their reporting methods
+to undercount school-related COVID cases —
+right in the midst of an acrimonious fight with
+the teacher’s union over in-person learning.
+
+He brought receipts to Twitter in a thread that
+quickly went viral, leading to national coverage,
+calls for investigation from city alderpeople,
+and a couple of suspiciously timed school
+administrator resignations.  While the school
+system claims they weren’t being intentionally
+misleading, they can’t argue with his data - and
+they can't mislead parents anymore, because
+every news outlet in Chicago ran screenshots
+from Jakob's dashboard.
+
+Anatomy of the perfect cloud
+project
+I’m shouting out this story for two reasons: 1)
+because Jakob is awesome and I’m really
+impressed by the work he’s doing, and 2)
+because his COVID dashboard is, like, the
+platonic ideal of how to do a cloud side project.
+Think about it:
+
+He made something useful
+
+208
+
+
+
+It helped that he started with the ACG
+challenge prompt, which was built around
+widely-applicable ETL (extract, transform, load)
+concepts - half of every cloud team's work can
+be summed up as "take some data from here,
+munge it into some other format, and then
+store it over there". He didn’t content himself
+with a “hello world” tutorial; he dug deep
+enough into cloud services to ship an actual
+application, something with a defensible
+purpose in the world.
+
+He made it his own
+
+But Jakob didn’t just follow the prompt to the
+letter. He used it as inspiration to build
+something that was relevant to him as a
+Chicago dad: a case tracker for the local
+schools. This gives the project a unique reason
+to exist, and also gave him motivation to keep
+up with it over time. It took almost a year after
+the dashboard went live for him to catch the
+issue that catapulted him into the headlines.
+Who would nurture a side project that long, and
+pay such close attention to it, if it wasn’t
+personally meaningful?
+
+Plus, he leveraged his domain expertise
+outside cloud; I’m not sure exactly how much
+
+209
+
+
+
+of his previous experience working with COVID
+in the hospital system went into making this
+dashboard, but it’s clear he understands how to
+work intelligently with infectious disease data.
+
+He made it accessible
+
+There’s nothing wrong with building a side
+project that spackles over something deep in
+the inner workings of a cloud provider. But
+those types of projects are helpful mostly to
+people who have experienced a very specific
+technical pain point. Jakob built something with
+a public interface that could be understood by
+hiring managers, angry parents, and
+obfuscating public officials alike. Long before
+he ever went viral, his skills had become
+undeniable.
+
+Bottom line: this is why we need more
+career-changers in cloud. A hospital
+background plus cloud ability helped Jakob
+discover an urgent public health issue that
+nobody else had spotted. If you’re new to cloud
+(or even if you’re not!), what’s your domain
+expertise? How can you stack your skills to
+build something useful and unique? Something
+that helps others at the same time that it
+advances your own career?
+
+210
+
+
+
+Paying it forward
+You see, the door to every big career
+opportunity has two sides. The outside says
+"Hard work", or maybe just "Luck."
+
+The inside says "Generosity."
+
+Every one of us working in cloud today, senior
+or junior, got started in our career because
+someone took a chance. Someone believed
+we could succeed. And then we busted our
+tails to prove them right.
+
+I started the Cloud Resume Challenge
+because I wanted to pay forward that
+generosity to others. People that didn't look like
+the stereotypical software engineer.
+
+A commercial plumber in downtown Atlanta. A
+researcher in an infectious disease laboratory.
+A single mom returning to the workforce. A
+professional poker player. All of them brilliant,
+self-motivated, fast-learning people. Every one
+of them just needed that little nudge, a quick
+guide, the right connection, to set them on their
+way.
+
+211
+
+
+
+The Cloud Resume Challenge is about more
+than just you and me, a writer and a reader. It's
+now a community initiative that has touched
+thousands of people. It's a movement.
+
+It's about the hiring manager who realizes they
+need to build an apprenticeship program to
+onboard more junior engineers. The senior
+engineer who mentors a challenger. The kid
+who decides to leave a dead-end degree
+program to build cloud skills.
+
+And every blog post you write, every project
+you share, spreads the movement a little
+further.
+
+When you support the Cloud Resume
+Challenge, you help to teach the world that a
+great cloud engineer can come from anywhere,
+from any background. In a small way, you are
+helping to build the future of this industry.
+
+If the Cloud Resume Challenge helps you
+enter a new phase of your career, don't forget
+to hold the door open for those behind you.
+The challenge has grown, but the spirit
+remains: senior, junior, career-changer or
+upskiller, we are all in this together.
+
+212
+
+
+
+Forrest Brazeal
+July, 2022
+
+213
+
+
+
+Acknowledgements
+
+My thanks to A Cloud Guru, who not only
+supported the underlying mission of the
+challenge by creating the spin-off "Cloud Guru
+Challenges", but also graciously permitted me
+to incorporate material from my ACG blog
+posts in this text. Keep being awesome, cloud
+gurus!
+
+Daniel Dersch, Corey Quinn, Jennine
+Townsend (times 2!), and Justin Wheeler
+contributed essays or challenges to various
+editions of this book. I owe you all a drink the
+next time that's a thing people can do.
+
+The entire Cloud Resume Challenge
+community, now more than 4,000 strong,
+assisted in the creation of this book by
+responding to surveys, offering feedback on
+the challenge, and creating resources that
+everyone can use. Special thanks to Nana, Ian,
+Stephanie, Stacy, Daniel, Jerry, and Jakob for
+their featured testimonials. I'm also especially
+grateful for the tireless community contributions
+of Tony Morris and Lou Bichard.
+
+214
